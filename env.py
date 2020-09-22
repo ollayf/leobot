@@ -34,6 +34,11 @@ default_user_data = {
 'temp_string' : ''
 }
 
+##   MESSAGES
+##############
+
+bot_init_msg = 'Energise!'
+
 ##################
 # ERROR MESSAGES #
 ##################

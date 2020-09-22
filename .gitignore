@@ -1,1 +1,6 @@
 leobot
+.git
+.idea
+*.cfg
+storage
+__pycache__
