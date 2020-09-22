@@ -1,0 +1,2 @@
+Message.de_json
+{'message_id': 30, 'date': 1600756402, 'chat': {'id': 333647246, 'type': 'private', 'username': 'ollayf', 'first_name': 'Hosea'}, 'text': 'Energise!', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1171777871, 'first_name': 'YF test', 'is_bot': True, 'username': 'ollayfbot'}}
