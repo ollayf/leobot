@@ -40,7 +40,8 @@ chat = deploy_config['chat_id']
 logging.basicConfig(filename='storage/error_log.txt', format='%(asctime)s - %(name)s - \
                     %(levelname)s - %(message)s', level=logging.INFO)
 
-dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised
+msg_return = dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised
+print(str(msg_return))
 
 def process_members(update, context):
     '''
