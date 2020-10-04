@@ -3,8 +3,6 @@ This script contains all the usual messages such as:
 - Error messages
 - Intiialising messages
 - Successful action messages
-
-It also links to all the relative paths
 '''
 
 ########################
@@ -13,26 +11,6 @@ It also links to all the relative paths
 
 # TODO: What is displayed when asked for the info of the bot
 BOT_DESCRIPTION = ''
-
-# TODO: Edit according to what we need to keep etc. This is initialised for each user when they become a member
-default_user_data = {
-'username': None,
-'user_id': None,
-'group_id': None,
-'permissions': None,
-'status': {
-    # for members
-    'initiated': False, 'started': False, 'feedback': False, 'action': False,
-    # for cfm IC
-    'cfm_settings': False, 'change_msg': 0,
-    # for admins
-    'admin_menu': False, 'add_event': 0, 'add_teaching': 0,
-    # for coders
-    'backend': False
-    },
-'temp_list': [],
-'temp_string' : ''
-}
 
 ##   MESSAGES
 ##############
@@ -79,7 +57,7 @@ end_msgs = ['Going so soon...._Alright..._Bye then...',\
     ]
 
 # when a user initialises the bot for the first time
-first_start_msg = 'Welcome {}! Is this your first time? Hi my name is ALPHAbot. I store important \
+first_start_msg = 'Welcome {}! Is this your first time? Hi my name is leobot. I store important \
 information and do particular administrative tasks to aide the running of LG. However just \
 like you I am not perfect, so please do not hesitate to give me feedback on how I can serve you \
 and the LG better. You can use \n/feedback to give me your feedback\n\n\
@@ -94,36 +72,3 @@ Commands you can use without doing /start (for quick use):\n\
 
 # 
 quit_fin_msg = 'Thanks bro. Goodbye!'
-
-# This is currently how I create the menu when i /help. TBH there could be a cleaner way to do this, i just
-possible_commands = {
-    'sleep' : { # the default mode
-        'events': 'shows the list of upcoming events',
-        'library': 'opens up a library of recent good teachings and articles',
-        'patch_notes': 'Shows the patch notes of the last update',
-        'info': 'Find out more about me and what I do!',
-        'start': 'start a conversation with me :)',
-        'part1': 'ONLY AVAILABLE FOR ADMINS',
-        'start_call': '/start_call [url] to start a call. \
-Sends a message to the group that the call is on, don\'t say bojio.',
-        'end_call': 'Informs me that the call is ended, aka stopping the spam',
-        'base_menu': ''
-        },
-
-    'started' : { # the mode activated after /start
-        'events': 'shows the list of upcoming events',
-        'library': 'opens up a library of recent good teachings and articles',
-        'patch_notes': 'Shows the patch notes of the last update',
-        'info': 'Find out more about me and what I do!',
-        'feedback': 'opens up the floor for a good ol\' one sided roasting session. Come at me bro',
-        'part1': 'FOR ADMINS ONLY',
-        'start_call': '/start_call [url] to start a call.\
-Sends a message to the group that the call is on, don\'t say bojio.',
-        'end_call': 'Informs me that the call is ended, aka stopping the spam',
-        'admin_menu': 'Opens the menu of functions for admins',
-        'cfm_settings': 'Opens the menu of functions for the confirmation IC',
-        'bday_settings': 'Opens the menu of functions for the birthday IC',
-        'end': 'ends the conversation with me :(',
-        'base_menu': ''
-        }
-    }

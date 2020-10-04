@@ -3,12 +3,15 @@ This script compiles the requirements for the bot and runs it on a loop
 It should also contain the functions of the bot
 '''
 
-from env import *
-from utils import *
+from leo_msgs import *
+from utils.core_utils import *
+from utils.logic import *
+from config import *
+from tables.table_classes import Table
 import telegram
 import datetime
 import time
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, PicklePersistence
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 import random
 from pytz import timezone
@@ -17,31 +20,38 @@ import argparse
 
 print('initialised')
 
-# setting up deployment environment config (REMOVE IF YOU ARE NOT USING CONFIG FILE BUT IT IS GOOD PRACTICE)
+# setting up deployment environment env (REMOVE IF YOU ARE NOT USING env FILE BUT IT IS GOOD PRACTICE)
 testing = True
 
 import configparser
-config = configparser.ConfigParser()
-config.read('bots.cfg')
+env = configparser.ConfigParser()
+env.read('bots.cfg')
 
 if testing:
-    deploy_config = config['testing']
+    deploy_env = env['testing']
 else:
-    deploy_config = config['live']
+    deploy_env = env['live']
 
-updater = Updater(token=deploy_config['token'], use_context=True)
+updater = Updater(token=deploy_env['token'], use_context=True)
 dispatcher = updater.dispatcher # for quicker access to the dispatcher object
 jobqueuer = updater.job_queue # for quicker access to JobQueue object
 
-owner = config['owners']['fei']
-chat = deploy_config['chat_id']
+owner = env['owners']['fei']
+chat = deploy_env['chat_id']
 
 # logs the problems in log.md file with level INFO
 logging.basicConfig(filename='storage/error_log.txt', format='%(asctime)s - %(name)s - \
                     %(levelname)s - %(message)s', level=logging.INFO)
 
+# SETUP DATABASE
+categories = Table('categories')
+comments = Table('comments')
+permissions = Table('permissions')
+threads = Table('threads')
+users = Table('users')
+
 msg_return = dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised
-print(str(msg_return))
+print('Message Return', str(msg_return))
 
 def process_members(update, context):
     '''
@@ -49,7 +59,14 @@ def process_members(update, context):
     This function being in group 0 make sure it is the highest priority and runs in parallel with other
     callback functions
     '''
-    pass
+    # for easier access to user_id
+    user_id = update.message.from_user.id
+
+    # initiates the user if it is his first time
+    initiate_user(user_id, update, context) # in utils
+
+    # updates the permission according to quits by the coder
+    # check_for_personal_changes(update, context)
 
 dispatcher.add_handler(MessageHandler(Filters.text, process_members), group=0) # gives most prirority
 
@@ -71,3 +88,4 @@ dispatcher.add_handler(MessageHandler(Filters.text, process_msg), group=1)
 # end - opposite of starting, aka ending the conversation with bot, all memory is cleared
 
 updater.start_polling()
+updater.idle()

@@ -1,0 +1,14 @@
+{
+    "1": {
+        "name": "members",
+        "power": 0
+    },
+    "2": {
+        "name": "admins",
+        "power": 10
+    },
+    "3": {
+        "name": "devs",
+        "power": 100
+    }
+}
