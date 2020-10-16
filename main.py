@@ -44,11 +44,11 @@ logging.basicConfig(filename='storage/error_log.txt', format='%(asctime)s - %(na
                     %(levelname)s - %(message)s', level=logging.INFO)
 
 # SETUP DATABASE
-categories = Table('categories')
-comments = Table('comments')
-permissions = Table('permissions')
-threads = Table('threads')
-users = Table('users')
+# categories = Table('categories')
+# comments = Table('comments')
+# permissions = Table('permissions')
+# threads = Table('threads')
+# users = Table('users')
 
 msg_return = dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised
 print('Message Return', str(msg_return))
@@ -69,6 +69,19 @@ def process_members(update, context):
     # check_for_personal_changes(update, context)
 
 dispatcher.add_handler(MessageHandler(Filters.text, process_members), group=0) # gives most prirority
+
+def post(update, context):
+    '''
+    Processes messages that are not commands i.e. a response to a prompt by the bot
+    Make sure this is the last callback function to grant lowest priority to because this means that 
+    the person is clearly not trying to call another function
+    '''
+    text = '''
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dolor ligula, dapibus sed faucibus non, aliquam ac ipsum. Sed dictum tincidunt scelerisque. Integer tristique sollicitudin augue a sollicitudin. Morbi ipsum ante, tempus sit amet velit vel, dictum mattis velit. Pellentesque porttitor cursus tortor, sit amet pharetra massa laoreet vitae. Praesent nulla ante, mollis sit amet mattis vel, venenatis sit amet nibh. In non massa in lacus eleifend interdum. Aliquam nec ipsum sed mi finibus ornare eu quis lorem. Duis orci est, imperdiet quis nisl non, aliquam efficitur ex. Nunc viverra nulla libero. Phasellus mattis euismod est, non pretium massa fringilla ac. Suspendisse gravida posuere mi id finibus. Pellentesque sed metus vitae nisl tincidunt ultricies nec eget ante. Vestibulum venenatis felis ante, nec pellentesque nisi accumsan non. Morbi nulla lacus, iaculis id tincidunt tincidunt, tempor et risus.
+    '''
+    context.bot.send_message(chat, text=text)
+
+dispatcher.add_handler(CommandHandler('post', post), group=1)
 
 def process_msg(update, context):
     '''

@@ -1,4 +1,4 @@
-from logic import *
+from utils.logic import *
 import logging
 
 def menu_activated(user_data):
