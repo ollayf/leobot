@@ -49,10 +49,38 @@ REFERENCES categories(category_id)
 ON DELETE SET NULL;
 
 CREATE TABLE comments (
-    msg_id int AUTO_INCREMENT,
+    msg_id int NOT NULL,
     thread_id int NOT NULL,
     user_id int,
     msg text NOT NULL,
     time_posted datetime NOT NULL,
     PRIMARY KEY(msg_id)
     );
+
+CREATE TABLE threads (
+    msg_id int NOT NULL,
+    parent_id int,
+    category_id int,
+    msg text NOT NULL,
+    post_time datetime NOT NULL,
+    title text NOT NULL,
+    likes int default 0,
+    origin_id int,
+    PRIMARY KEY (msg_id),
+    FOREIGN KEY (origin_id) REFERENCES users(user_id)
+    );
+
+ALTER TABLE threads 
+ADD FOREIGN KEY(parent_id)
+REFERENCES threads(msg_id)
+ON DELETE SET NULL;
+
+CREATE TABLE actions (
+    action_id int auto_increment,
+    msg_id INT,
+    function_id INT,
+    action_dt datetime NOT NULL,
+    user_id int NOT NULL,
+    primary key(action_id)
+    );
+    
