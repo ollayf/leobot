@@ -1,5 +1,24 @@
 from utils.logic import *
+import utils.db_utils as db_utils
 import logging
+from collections import defaultdict
+
+####################
+# INITIALISING BOT #
+####################
+
+#########
+# USERS #
+#########
+
+def initiate_user(dbi, user):
+    user_id = user.id
+    username = user.username
+    firstname = user.first_name
+    lastname = user.last_name
+    if username is None:
+        username = firstname
+    dbi.new_user(user_id, username, firstname, lastname)
 
 def menu_activated(user_data):
     '''

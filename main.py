@@ -17,6 +17,7 @@ import random
 from pytz import timezone
 import emojis
 import argparse
+import utils.db_utils as db_utils
 
 print('initialised')
 
@@ -24,20 +25,24 @@ print('initialised')
 testing = True
 
 import configparser
-env = configparser.ConfigParser()
-env.read('bots.cfg')
+config = configparser.ConfigParser()
+config.read('bot.cfg')
 
 if testing:
-    deploy_env = env['testing']
+    bot_config = dict(config['test_bot'])
+    print(str(config))
+    dbi = db_utils.Database(config, 'test_db')
 else:
-    deploy_env = env['live']
+    bot_config = config['live_bot']
+    dbi = db_utils.Database(config, 'live_db')
 
-updater = Updater(token=deploy_env['token'], use_context=True)
+updater = Updater(token=bot_config['token'], use_context=True)
 dispatcher = updater.dispatcher # for quicker access to the dispatcher object
 jobqueuer = updater.job_queue # for quicker access to JobQueue object
 
-owner = env['owners']['fei']
-chat = deploy_env['chat_id']
+# TODO: ACTUAL DEPLOYMENT CHANGE
+owner = config['owners']['fei']
+chat = bot_config['chat_id']
 
 # logs the problems in log.md file with level INFO
 logging.basicConfig(filename='storage/error_log.txt', format='%(asctime)s - %(name)s - \
@@ -53,22 +58,34 @@ logging.basicConfig(filename='storage/error_log.txt', format='%(asctime)s - %(na
 msg_return = dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised
 print('Message Return', str(msg_return))
 
-def process_members(update, context):
-    '''
-    Processes the changes in member data i.e. when the user first starts the bot.
-    This function being in group 0 make sure it is the highest priority and runs in parallel with other
-    callback functions
-    '''
-    # for easier access to user_id
-    user_id = update.message.from_user.id
+# def process_members(update, context):
+#     '''
+#     Processes the changes in member data i.e. when the user first starts the bot.
+#     This function being in group 0 make sure it is the highest priority and runs in parallel with other
+#     callback functions
+#     '''
+#     # for easier access to user_id
+#     user_id = update.message.from_user.id
 
-    # initiates the user if it is his first time
-    initiate_user(user_id, update, context) # in utils
+#     # initiates the user if it is his first time
+#     initiate_user(user_id, update, context) # in utils
 
-    # updates the permission according to quits by the coder
-    # check_for_personal_changes(update, context)
+#     # updates the permission according to quits by the coder
+#     # check_for_personal_changes(update, context)
 
-dispatcher.add_handler(MessageHandler(Filters.text, process_members), group=0) # gives most prirority
+# dispatcher.add_handler(MessageHandler(Filters.text, process_members), group=0) # gives most prirority
+
+def start(update, context):
+    user = update.message.from_user
+    user_id = user.id
+
+    if dbi.user_exist(user_id):
+        update.message.reply_text(text=start_msg)
+    else:
+        initiate_user(dbi, user)
+        update.message.reply_text(text=first_start_msg)
+    
+dispatcher.add_handler(CommandHandler('start', start), group=1)
 
 def post(update, context):
     '''
@@ -102,3 +119,4 @@ dispatcher.add_handler(MessageHandler(Filters.text, process_msg), group=1)
 
 updater.start_polling()
 updater.idle()
+dbi.close()

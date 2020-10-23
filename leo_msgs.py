@@ -55,20 +55,19 @@ end_msgs = ['Going so soon...._Alright..._Bye then...',\
     'Thank you for waiting._We\'ve restored your Pokémon to full health._We hope to see you again!',\
     'k thx bai'
     ]
-
+start_msg = """Yoyo waz goin on today?
+/end -- end the convo with me"""
 # when a user initialises the bot for the first time
-first_start_msg = 'Welcome {}! Is this your first time? Hi my name is leobot. I store important \
+first_start_msg = """Welcome {}! Is this your first time? Hi my name is leobot. I store important \
 information and do particular administrative tasks to aide the running of LG. However just \
 like you I am not perfect, so please do not hesitate to give me feedback on how I can serve you \
-and the LG better. You can use \n/feedback to give me your feedback\n\n\
-\
-Commands you can use without doing /start (for quick use):\n\
-/events -- shows the list of upcoming events including their dates, timings and locations.\n\
-/library -- shows the list of good articles/ sermons to read in you own time.\n\
-/start_call -- to be called when you start a call on any platform (only available for admins)\n\
-/end_call -- ends the call that is currently on (only available for admins)\n\
-/birthdays -- shows the full list of birthdays as well as the closest birthday.\n\
-/help -- can be used at any time to give the list of possible functions'
+and the LG better. You can use \n/feedback to give me your feedback
+
+Commands you can use without doing /start (for quick use):
+/start -- start a conversation with me :)
+/end -- end the conversation
+/tutorial -- a simple tutorial to test the functions (will be erased after /end)
+/help -- can be used at any time to give the list of possible functions"""
 
 # 
 quit_fin_msg = 'Thanks bro. Goodbye!'

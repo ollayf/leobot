@@ -1,13 +1,11 @@
 import mysql.connector
-print(mysql.connector.__version__)
-cnx = mysql.connector.connect(user='root', password='Charm1523_',
-                              host='localhost', raise_on_warnings=True,
-                              database='test')
+import utils.db_utils as db_utils
 
-print(cnx.is_connected())
+import configparser
+config = configparser.ConfigParser()
+config.read('bot.cfg')
 
-db = cnx.cursor(buffer=True)
-query = """SELECT * FROM permissions""" 
-db.execute(query)
-print(db.fetchall())
-cnx.close()
+bot_config = dict(config['test_bot'])
+print(str(config))
+dbi = db_utils.Database(config, 'test_db')
+dbi.init_db()
