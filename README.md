@@ -3,8 +3,9 @@ This project was started to create a platform for Hope Singapore intercessors to
 Telegram was used, rather than a whole web app, to save costs as well as make it convenient for users who are very accustomed to Telegram platforms. This is whole system was made to run on an Ubuntu OS on RasPi 4 as a server.  
 
 This is the structure of this project:
-- **UTILS** - contains the core functionalities of the project
-- **ENV** - contains the default data, paths and messages of the bot
+- **UTILS** - contains the core functionalities of the project  
+- **LOGIC** - The mathematical/ algorithmic utilities for the project
+- **CONFIG** - contains the default data, paths and messages of the bot
 - **MAIN** - contains the code for the main server to be run for this bot
 - **UPDATES** - contains the regular updates of the bot (not yet able to be edited real time)
 - **IMAGES** - contains all the important images to be used by the bot including the bot's dp
@@ -12,7 +13,7 @@ This is the structure of this project:
 
 ## Software used:
 - python 3.7.9
-- Ubuntu 18.04 as server OS, Windows 10 as testing OS
+- Ubuntu 18.04
 - python packages used in requirements.txt
 
 ## Credits:

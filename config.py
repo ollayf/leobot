@@ -12,45 +12,6 @@ default_user_data = {
 'temp_string' : ''
 }
 
-user = {
-    'user_id': None,
-    'permissions_id': None,
-    'last_login': None,
-    'last_action': None,
-    'username': None,
-    'first_name': None,
-    'last_name': None
-}
-
-thread = {
-    'parent': None,
-    'category_id': None,
-    'message': None,
-    'thread_id': None,
-    'time': None,
-    'title': None,
-    'likes': None,
-    'comments': []
-}
-
-comment = {
-    'comment_id': None,
-    'thread_id': None,
-    'user_id': None,
-    'message': None,
-    'time': None
-}
-
-category = {
-    'category_id': None,
-    'name': None,
-    'parent': None
-}
-
-commands = {}
-
-menus = {}
-
 # This is currently how I create the menu when i /help. TBH there could be a cleaner way to do this, i just
 commands = {
     'sleep' : { # the default mode
@@ -75,3 +36,34 @@ commands = {
         'base_menu': ''
         }
     }
+
+######################3
+# LIST OF EVENT CODES #
+#######################
+
+# FOR CREATING THREAD
+NEW_THREAD, \
+TITLE, \
+CAT, \
+BODY, \
+FILE, \
+TC, \
+TAGS = map(chr, range(10, 17))
+
+# BASIC COMMANDS AT ALL POINTS
+
+END, \
+TIMEOUT = -1, -2
+
+START, \
+CANCEL, \
+QUIT, \
+INIT, \
+COMPLETED, \
+YES, \
+NO, \
+INVALID, \
+MENU = map(chr, range(9))
+
+# SPECIFIC COMMANDS:
+FEEDBACK = chr(20)

@@ -4,6 +4,8 @@ general functions
 '''
 
 import datetime
+import jellyfish
+import heapq
 
 ## DATETIME-RELATED
 #####################
@@ -49,3 +51,24 @@ def getDatetimeOfNextXDay(isoweekday, hour):
     dateTime = datetime.datetime(date.year, date.month, date.day, hour, 0, 0)
     dateTime = manual_convert_SGT(dateTime)
     return dateTime
+
+def infer_category(cat, ref, thresh=2):
+    res = list(map(lambda x: jellyfish.damerau_levenshtein_distance(cat, x), ref))
+    res = min(res)
+    if res <= thresh:
+        return res
+    else:
+        return None
+
+def closest_matches(tag, ref, num=5, thresh=1):
+    res = heapq.nsmallest(num, ref, 
+        lambda x: jellyfish.damerau_levenshtein_distance(tag, x))
+    if jellyfish.damerau_levenshtein_distance(tag, res[0]) <= thresh:
+        return res[0]
+    else:
+        return res
+
+if __name__ == '__main__':
+    guess = ['Testimony', 'Testi', 'test', 'testi', 'testimoney','testimonies']
+    ref = ['Testimony', 'Essay', 'Excerpt', 'Sermon', 'yeet', 'potato', 'scrabbel']
+    print(closest_matches(guess[0], ref, 3))

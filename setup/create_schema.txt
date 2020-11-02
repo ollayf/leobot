@@ -54,7 +54,8 @@ CREATE TABLE comments (
     user_id int,
     msg text NOT NULL,
     time_posted datetime NOT NULL,
-    PRIMARY KEY(msg_id)
+    PRIMARY KEY(msg_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
     );
 
 CREATE TABLE threads (
@@ -81,6 +82,8 @@ CREATE TABLE actions (
     function_id INT,
     action_dt datetime NOT NULL,
     user_id int NOT NULL,
-    primary key(action_id)
+    primary key(action_id),
+    FOREIGN KEY(user_id) REFERENCES users(user_id),
+    FOREIGN KEY(function
     );
     
