@@ -20,6 +20,7 @@ def cancel(update, context):
 def end(update, context):
     chosen_msg = random.choice(end_msgs)
     update.message.reply_text(chosen_msg)
+    context.user_data.clear()
     return END
 
 def quit(update, context):
@@ -29,6 +30,7 @@ def quit(update, context):
 
 def timeout(update, context):
     update.message.reply_text(timeout_msg)
+    context.user_data.clear()
     return END
 
 def no(update, context):

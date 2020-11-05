@@ -241,6 +241,8 @@ def post_thread(update, context, content, chat_id):
         None: bot.send_message
     }
     fn = fns[user_data['file_type']]
+    if '.' in content:
+        content = content.replace('.', '\.')
     if fn == bot.send_message:
         msg = fn(chat_id, content, parse_mode='MarkdownV2')
     else:

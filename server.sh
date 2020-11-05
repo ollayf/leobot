@@ -1,2 +1,4 @@
+source /home/Hosea/.local/bin/virtualenvwrapper.sh
 workon leobot
-python main.py
+python main.py &
+disown

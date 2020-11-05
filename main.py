@@ -20,7 +20,7 @@ import utils.db_utils as db_utils
 print('initialising')
 
 # setting up deployment environment env (REMOVE IF YOU ARE NOT USING env FILE BUT IT IS GOOD PRACTICE)
-testing = True
+testing = False
 
 import configparser
 config = configparser.ConfigParser()

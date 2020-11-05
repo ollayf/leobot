@@ -90,7 +90,7 @@ class Database():
         """
         self.db.execute(query)
 
-    def new_user(self, user_id, username, firstname, lastname, permissions_id=4):
+    def new_user(self, user_id, username, firstname, lastname, permissions_id=7):
         user_id = int(user_id)
         firstname, lastname = dbfmt(firstname), dbfmt(lastname)
 
