@@ -112,6 +112,15 @@ def get_msg_file(message: telegram.Message):
 
     return file_id, file_type
 
+def generate_menu(menu, dbi, user_id):
+    msg = ''
+    fns = dbi.menu_fns(menu, user_id)
+    for fn in fns:
+        line = ' -- '.join(fn)
+        line += '\n'
+        msg += line
+    return msg
+
 ###########
 # THREADS #
 ###########

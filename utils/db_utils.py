@@ -46,11 +46,21 @@ class Database():
         self.cnx = mysql.connector.connect(**config)
 
         if self.cnx.is_connected():
-            print('Connection started')
+            print('Connected to {}'.format(config['database']))
         else:
             print('Connection failed... Closing app')
             exit()
         self.db = self.cnx.cursor()
+    
+    def execute(self, query: str):
+        '''
+        A wrapper function around the original execute function to check if
+        connection is still open. If not start a new connection
+        '''
+        if not self.cnx.is_connected():
+            self._connect_DB(self.db_config)
+
+        self.db.execute(query)
 
     def get_user_perms(self, user_id):
         query = f"""
@@ -61,7 +71,7 @@ class Database():
         WHERE users.user_id = {user_id}
         """
         print(query)
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchone()
         print('RES:', res)
         return res
@@ -76,9 +86,29 @@ class Database():
         WHERE functions.name = {fn}
         """
         print(query)
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchone()
         print('RES:', res)
+        return res
+
+    def menu_fns(self, menu, user_id):
+        perm_name, perm_power = self.get_user_perms(user_id)
+        perm_name = dbfmt(perm_name)
+        query = f"""
+        SELECT functions.name, functions.description
+        FROM functions
+        LEFT JOIN permissions
+        ON functions.permissions_id = permissions.id
+        WHERE
+        (functions.{menu} = 1
+        OR functions.all_menu = 1)
+        AND 
+        (permissions.name = {perm_name}
+        OR permissions.power < {perm_power})
+        """
+        print(query)
+        self.execute(query)
+        res = self.db.fetchall()
         return res
 
     def new_permissions(self, level, power):
@@ -88,7 +118,38 @@ class Database():
         INSERT INTO permissions (level, power)
         VALUES ('{level}', {power})
         """
-        self.db.execute(query)
+        self.execute(query)
+    
+    def write_fns_table(self, functions:dict):
+
+        query = """
+        DELETE FROM functions;
+        ALTER TABLE functions AUTO_INCREMENT = 1
+        """
+        print(query)
+        self.execute(query)
+        for key in functions.keys():
+            print(key)
+            value = functions[key]
+            self.new_fn(key, *value)
+
+
+    def new_fn(self, name, desc, sleep_menu, start_menu, admin_menu, backend, 
+        all_menu, in_action=0, permissions_id=4):
+        name = dbfmt(name)
+        desc = dbfmt(desc)
+        query = f"""
+        INSERT INTO functions (name, description, sleep_menu,
+        start_menu, admin_menu, backend, all_menu, in_action, 
+        permissions_id) 
+        VALUES
+        ({name}, {desc}, {sleep_menu}, {start_menu}, {admin_menu}, {backend},
+        {all_menu}, {in_action}, {permissions_id});
+        """
+        print(query)
+        self.execute(query)
+        self.cnx.commit()
+
 
     def new_user(self, user_id, username, firstname, lastname, permissions_id=7):
         user_id = int(user_id)
@@ -102,7 +163,7 @@ class Database():
         '{username}', {firstname}, {lastname})
         """ 
         print(query)
-        self.db.execute(query)
+        self.execute(query)
         self.cnx.commit()
 
     def user_exist(self, user_id):
@@ -111,7 +172,7 @@ class Database():
         WHERE user_id = {user_id}
         """
         print(query)
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchone()
         print('res', res)
         if res:
@@ -124,7 +185,7 @@ class Database():
         query = """
         INSERT INTO threads() VALUES ()
         """
-        self.db.execute(query)
+        self.execute(query)
         self.cnx.commit()
         return self.db.lastrowid
 
@@ -156,7 +217,7 @@ class Database():
         WHERE id = {thread_id}
         """
         print(query)
-        self.db.execute(query)
+        self.execute(query)
         self.cnx.commit()
     
     def new_fb(self, author_id, title, msg, file_id, file_type):
@@ -174,7 +235,7 @@ class Database():
             {file_type}
         )
         """
-        self.db.execute(query)
+        self.execute(query)
         self.cnx.commit()
     
     def sumview_fb(self):
@@ -183,7 +244,7 @@ class Database():
         FROM feedback
         WHERE resolved_dt IS NULL
         """
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchall()
         return res
     
@@ -194,7 +255,7 @@ class Database():
         WHERE id = {id}
         """
         print(query)
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchone()
         return res
     
@@ -213,7 +274,7 @@ class Database():
             SELECT id FROM feedback
             WHERE resolved_dt IS NULL
             """
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchall()
         return res
 
@@ -222,7 +283,7 @@ class Database():
         SELECT id FROM users
         WHERE user_id = {user_id}
         """
-        self.db.execute(query)
+        self.execute(query)
         return self.db.fetchone()[0]
 
     def cat_id(self, cat: str, tag=False):
@@ -238,7 +299,7 @@ class Database():
         AND tag = {tag};
         """
         print('CAT ID:', query)
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchone()[0]
         return res
     
@@ -249,7 +310,7 @@ class Database():
         FROM categories
         WHERE tag = {tag}
         """
-        self.db.execute(query)
+        self.execute(query)
         res = self.db.fetchall()
         return res
     
@@ -267,7 +328,7 @@ class Database():
             {tag}
         )
         """
-        self.db.execute(query)
+        self.execute(query)
         self.cnx.commit()
 
     def close(self):
@@ -277,13 +338,13 @@ class Database():
         '''
         Don't use unless you know what you are doing
         '''
-        self.db.execute("""SHOW TABLES""")
+        self.execute("""SHOW TABLES""")
 
         tables = self.db.fetchall()
         for table in tables:
             query = f"""DELETE FROM {table[0]};"""
             print(query)
-            self.db.execute(query)
+            self.execute(query)
         
         self.cnx.commit()
     
@@ -298,7 +359,7 @@ class Database():
 		('admin', 10),
 		('devs', 100);
         """
-        self.db.execute(query)
+        self.execute(query)
         # users 
         query = """
         INSERT INTO users (user_id, permissions_id, 
@@ -306,5 +367,5 @@ class Database():
         VALUES ( 333647246, 6, 
         'ollayf', 'Hosea')
         """
-        self.db.execute(query)
+        self.execute(query)
         self.cnx.commit()

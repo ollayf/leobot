@@ -6,6 +6,6 @@ config = configparser.ConfigParser()
 config.read('bot.cfg')
 
 bot_config = dict(config['test_bot'])
-print(str(config))
 dbi = db_utils.Database(config, 'test_db')
-dbi.init_db()
+res = dbi.menu_fns('start_menu', 678686611)
+print(res)

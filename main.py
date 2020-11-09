@@ -20,7 +20,7 @@ import utils.db_utils as db_utils
 print('initialising')
 
 # setting up deployment environment env (REMOVE IF YOU ARE NOT USING env FILE BUT IT IS GOOD PRACTICE)
-testing = False
+testing = True
 
 import configparser
 config = configparser.ConfigParser()
@@ -138,8 +138,7 @@ start_conv = ConversationHandler(
         TIMEOUT: [MessageHandler(Filters.text, timeout)]
     },
     fallbacks= [CommandHandler('end', end)],
-    conversation_timeout=900
-
+    conversation_timeout=600
 )
 
 # def not_command(update, context):
