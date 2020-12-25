@@ -278,9 +278,19 @@ def ch_perm(update, context):
     if not perms:
         update.message.reply_text(perms_ne_error)
         return MENU
-    
-    print('User, Perms:')
-    print(user, perms)
+    sender_id = update.message.from_user.id
+    # checks if the user that sent this requests is more powerful than reagent
+    user_allow = core_utils.compare_perms(sender_id, user, True)
+    # checks if the user that sent this requests is more powerful than the perms he is giving
+    perms_allow = core_utils.compare_perms(sender_id, perms, True)
+    if user_allow and perms_allow:
+        old_perm, _ = dbi.get_user_perms(user)
+        dbi.ch_perms(perms, user)
+        msg = ch_perm_msg.format()
+        update.message.reply_text(permi)
+    else:
+        update.message.reply_text(permission_fail)
+
     return MENU
 
 # def sel_user(update, context):

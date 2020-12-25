@@ -180,6 +180,34 @@ def closest_user(value, dbi):
         uid = dbi.username2uid(value)
         return uid
 
+def compare_perms(agent, reagent, dbi, a_user=False, r_user=False):
+    '''
+    Currently only takes in ids (all integers)
+
+    Compares the permissions between 2 parties:
+    - Agent: The permissions level of the one intiating the function
+    - Reagent: The recipient of said changes made
+
+    returns True if agent is has rights over reagent
+    False if not
+    None if error
+    '''
+    try:
+        agent = int(agent)
+        reagent = int(reagent)
+    except ValueError:
+        return None
+    if a_user:
+        _, a_power = dbi.get_user_perms(agent)
+    else:
+        a_power = dbi.perm_dets(agent)
+        
+    if r_user:    
+        _, r_power = dbi.get_user_perms(reagent)
+    else:
+        r_power = dbi.perm_dets(reagent)
+    return a_power >= r_power
+
 def closest_perms(value, dbi):
     # tries to convert into a int if not a string
     if not isinstance(value, int):

@@ -63,13 +63,22 @@ class Database():
         self.db.execute(query)
 
     def get_user_perms(self, user_id):
-        query = f"""
-        SELECT permissions.name, permissions.power
-        FROM users 
-        LEFT JOIN permissions
-        ON users.permissions_id = permissions.id
-        WHERE users.user_id = {user_id}
-        """
+        if user_id > 10000: # if is a telegram user_id
+            query = f"""
+            SELECT permissions.name, permissions.power
+            FROM users 
+            LEFT JOIN permissions
+            ON users.permissions_id = permissions.id
+            WHERE users.user_id = {user_id}
+            """
+        else: # if it is just an id in the db
+            query = f"""
+            SELECT permissions.name, permissions.power
+            FROM users 
+            LEFT JOIN permissions
+            ON users.permissions_id = permissions.id
+            WHERE users.id = {user_id}
+            """
         print(query)
         self.execute(query)
         res = self.db.fetchone()
@@ -95,7 +104,7 @@ class Database():
         """
         self.execute(query)
         res = self.db.fetchall()
-        return res
+        return res      
     
     def get_fn_perms(self, fn):
         fn = dbfmt(fn)
@@ -162,6 +171,15 @@ class Database():
         res = self.db.fetchone()
         return res
 
+    def perm_dets(self, perms_id):
+        query = f"""
+        SELECT name, power
+        FROM permissions 
+        WHERE id = {perms_id}
+        """
+        self.execute(query)
+        res = self.db.fetchone()
+        return res
 
     def menu_fns(self, menu, user_id):
         perm_name, perm_power = self.get_user_perms(user_id)
