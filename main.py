@@ -115,13 +115,27 @@ admin_conv = ConversationHandler(
     entry_points=[CommandHandler('admin_menu', admin_menu)],
     states={
         MENU: [CommandHandler('sview_fb', sview_fb),
-            CommandHandler('dview_fb', dview_fb)
+            CommandHandler('dview_fb', dview_fb),
+            CommandHandler('ch_perm', ch_perm),
+            CommandHandler('all_members', all_members)
             ],
     },
     fallbacks= [CommandHandler('quit', quit),
                 CommandHandler('end', end)],
     map_to_parent= {
-        COMPLETED: MENU,
+        END: END,
+        QUIT: MENU
+    }
+)
+
+be_conv = ConversationHandler(
+    entry_points=[CommandHandler('backend', admin_menu)],
+    states={
+        MENU: [],
+    },
+    fallbacks= [CommandHandler('quit', quit),
+                CommandHandler('end', end)],
+    map_to_parent= {
         END: END,
         QUIT: MENU
     }
@@ -133,7 +147,8 @@ start_conv = ConversationHandler(
         MENU: [
             new_thread_conv,
             feedback_conv,
-            admin_conv],
+            admin_conv,
+            ],
         END: [CommandHandler('start', start)],
         TIMEOUT: [MessageHandler(Filters.text, timeout)]
     },
@@ -150,6 +165,7 @@ start_conv = ConversationHandler(
 #     update.message.reply_text('Not real command')
 
 # dispatcher.add_handler(MessageHandler(Filters.command, not_command), group=1)
+dispatcher.add_handler(CommandHandler('help', help))
 dispatcher.add_handler(start_conv)
 
 updater.start_polling()

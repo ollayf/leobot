@@ -60,10 +60,10 @@ def infer_category(cat, ref, thresh=2):
     else:
         return None
 
-def closest_matches(tag, ref, num=5, thresh=1):
+def closest_matches(value, ref, num=5, thresh=1):
     res = heapq.nsmallest(num, ref, 
-        lambda x: jellyfish.damerau_levenshtein_distance(tag, x))
-    if jellyfish.damerau_levenshtein_distance(tag, res[0]) <= thresh:
+        lambda x: jellyfish.damerau_levenshtein_distance(value, x))
+    if jellyfish.damerau_levenshtein_distance(value, res[0]) <= thresh:
         return res[0]
     else:
         return res

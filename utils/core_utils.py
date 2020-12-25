@@ -41,7 +41,7 @@ def menu_activated(user_data):
     Returns True if it is and False if it isn't
     '''
     menus = ['admin_menu', 'backend', 'confirmation', 'birthday']
-    status_dict = user_data['status']
+    status_dict = user_data['temp']['status']
     result = False
     # checks if any of the menus are accessed currently
     for menu in menus:
@@ -64,7 +64,7 @@ def check_permissions(fn, user_id, dbi):
 
 def set_user_data_to_default(update, context, default_user_data):
     '''
-    Recursively sets user_data of this user to default user_data
+    Recursively sets user_data['temp'] of this user to default user_data['temp']
     '''
     assert isinstance(default_user_data, (dict, defaultdict)), \
         'default user data must be a defaultdict or dict'
@@ -75,22 +75,6 @@ def set_user_data_to_default(update, context, default_user_data):
             context.user_data[key] = default_user_data[key].copy()
         else:
             context.user_data[key] = default_user_data[key]
-
-def close_all_menus(user_data):
-    '''
-    Closes all menus in the conversation
-    If a new menu is added, change this function and the next only
-    '''
-    user_data['status']['admin_menu'] = False
-    user_data['status']['backend'] = False
-    user_data['status']['cfm_settings'] = False
-    user_data['status']['bday_settings'] = False
-
-def clear_user_memory(user_data, end=False, quit=False):
-    '''
-    in an event such as ending the bot, reset all the attributes of the user to default
-    '''
-    pass
 
 ###########
 # general #
@@ -112,14 +96,121 @@ def get_msg_file(message: telegram.Message):
 
     return file_id, file_type
 
-def generate_menu(menu, dbi, user_id):
-    msg = ''
+def generate_options(options, msg=''):
+    msg += '\n\n'
+    if isinstance(options, list):
+        for option in options:
+            i, details = option[0], option[1:]
+            # ensures that all values are strings
+            details = list(map(str, details))
+            details = ' | '.join(details)
+            line =f'{i}: {details}\n'
+            msg += line
+    elif isinstance(options, (dict, defaultdict)):
+        for key in options.keys():
+            i, details = key, options[key]
+            # ensures that all values are strings
+            details = list(map(str, details))
+            details = ' | '.join(details)
+            line =f'{i}: {details}\n'
+            msg += line
+    return msg
+
+def generate_menu(menu, dbi, user_id, msg=''):
+    msg += '\n\n'
     fns = dbi.menu_fns(menu, user_id)
     for fn in fns:
         line = ' -- '.join(fn)
         line += '\n'
         msg += line
     return msg
+
+def curr_menu(context):
+    user_data = context.user_data
+    if user_data['action']:
+        return 'in_action'
+    else:
+        menu = user_data['menu']
+        return menu
+
+def ch_menu(context, menu=None, action=True):
+    if not menu:
+        if action:
+            context.user_data['action'] = True
+        else:
+            context.user_data['action'] = False
+    else:
+        context.user_data['menu'] = menu
+
+def reset_user(context):
+    context.user_data['temp'].clear()
+
+def closest_user(value, dbi):
+    # tries to convert into a int if not a string
+    if not isinstance(value, int):
+        try:
+            print('Trying')
+            value = int(value)
+        except ValueError:
+            print('Yeet')
+            pass # assumes value is a string
+    all_users = dbi.get_all_users()
+    print('All users:', all_users)
+    # if value input is integer
+    if isinstance(value, int): 
+        all_uids = [x[0] for x in all_users]
+        print('All uids', all_uids)
+        if value in all_uids:
+            return value
+        else:
+            return None
+
+    else: # Assumes value is a string
+        all_usernames = [x[1] for x in all_users]
+        print('All usernames', all_usernames)
+        if value in all_usernames:
+            pass
+        else:
+            res = logic.closest_matches(value, all_usernames, 1, 3)
+            if isinstance(res, list): # threshold not met
+                return None
+            else: # close match found
+                value = res
+        print('Value:', value)
+        uid = dbi.username2uid(value)
+        return uid
+
+def closest_perms(value, dbi):
+    # tries to convert into a int if not a string
+    if not isinstance(value, int):
+        try:
+            value = int(value)
+        except ValueError:
+            pass # assumes value is a string
+    all_perms = dbi.get_all_perms()
+    # if value input is integer
+    if isinstance(value, int): 
+        all_perms = [x[0] for x in all_perms]
+        print('All perms', all_perms)
+        if value in all_perms:
+            return value
+        else:
+            return None
+
+    else: # Assumes value is a string
+        all_perms = [x[1] for x in all_perms]
+        print('All permissions', all_perms)
+        if value in all_perms: # uses the input
+            pass
+        else: # tries to find the closest match
+            res = logic.closest_matches(value, all_perms, 1, 3)
+            if isinstance(res, list): # threshold not met
+                return None
+            else: # close match found
+                value = res
+        
+        perm_id = dbi.perm_name2id(value)
+        return perm_id
 
 ###########
 # THREADS #
@@ -219,10 +310,10 @@ def parse_tags(msg):
 
 def get_thread_data(context):
 
-    category = context.user_data['cat']
-    title = context.user_data['title']
-    body = context.user_data['body']
-    tags = context.user_data['tc'].final_tags
+    category = context.user_data['temp']['cat']
+    title = context.user_data['temp']['title']
+    body = context.user_data['temp']['body']
+    tags = context.user_data['temp']['tc'].final_tags
     return category, title, body, tags
 
 def prepare_tags(tags: list):
@@ -240,6 +331,7 @@ def prepare_thread(context, template, thread_id):
 
 def post_thread(update, context, content, chat_id):
     user_data = context.user_data
+    user_data['temp'] = context.user_data['temp']
     bot = context.bot
     fns = {
         telegram.PhotoSize: bot.send_photo,
@@ -249,13 +341,13 @@ def post_thread(update, context, content, chat_id):
         telegram.Document: bot.send_document,
         None: bot.send_message
     }
-    fn = fns[user_data['file_type']]
+    fn = fns[user_data['temp']['file_type']]
     if '.' in content:
         content = content.replace('.', '\.')
     if fn == bot.send_message:
         msg = fn(chat_id, content, parse_mode='MarkdownV2')
     else:
-        msg = fn(chat_id, user_data['file_id'], caption=content,\
+        msg = fn(chat_id, user_data['temp']['file_id'], caption=content,\
              parse_mode='MarkdownV2')
     
     return msg
@@ -269,7 +361,7 @@ def log_thread(dbi, thread_id, context, msg, author_id):
     msg_id = msg.message_id
     post_time = msg.date
     cat_id = dbi.cat_id(category)
-    file_id = context.user_data['file_id']
+    file_id = context.user_data['temp']['file_id']
     print(type(post_time), post_time)
     dbi.new_thread(thread_id, msg_id, cat_id, body, title, author_id,
         post_time, file_id)
@@ -280,8 +372,9 @@ def log_thread(dbi, thread_id, context, msg, author_id):
 ############
 def get_fb_details(context):
     user_data = context.user_data
-    title = user_data['title']
-    body = user_data['body']
+    user_data['temp'] = context.user_data['temp']
+    title = user_data['temp']['title']
+    body = user_data['temp']['body']
     return title, body
 
 def sumview_fb(dbi):

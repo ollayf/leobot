@@ -49,6 +49,14 @@ fb_sumview_temp = '**{id}**: __{title}__'
 fb_detview_temp = """__{id}: {title}__ 
 {msg}"""
 
+##################
+# changing perms #
+##################
+sel_user_msg = "Which user would you like to do this on?"
+sel_perm_msg = 'Which permissions would you like to choose?'
+ch_perm_msg = 'User {} permissions changed from {} to {}!'
+user_view_msg = 'Current members:'
+
 ################
 # Fundamentals #
 ################
@@ -84,6 +92,8 @@ end_msgs = ['Going so soon.... Alright... Bye then...',\
     'k thx bai'
     ]
 
+quit_msg = 'Going back to start menu'
+
 ##################
 # ERROR MESSAGES #
 ##################
@@ -106,6 +116,10 @@ quit_fail = 'bruh there\'s nothing to quit lol'
 user_timeout_msg = '15 minutes is up, I will automatically be going to sleep. Please remember \
 to end the conversation when not in use.\nYou can also use /events, /library, /start_call \
 /end_call without starting me up.'
+invalid_input_error = 'Invalid input. Please select one of the given options'
+
+user_ne_error = 'User doesn\'t exist'
+perms_ne_error = 'Permissions doesn\'t exist'
 
 ######################
 # SUCCESSFUL ACTIONS #

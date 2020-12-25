@@ -62,8 +62,13 @@ INIT, \
 COMPLETED, \
 YES, \
 NO, \
+SELECT, \
 INVALID, \
-MENU = map(chr, range(9))
+MENU = map(chr, range(10))
+
+# selection
+USER, \
+PERMS = map(chr, range(30, 32))
 
 # SPECIFIC COMMANDS:
 FEEDBACK = chr(20)

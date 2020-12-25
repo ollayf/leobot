@@ -73,7 +73,28 @@ class Database():
         print(query)
         self.execute(query)
         res = self.db.fetchone()
-        print('RES:', res)
+        return res
+    
+    def username2uid(self, username):
+        username = dbfmt(username)
+        query = f"""
+        SELECT id
+        FROM users
+        WHERE username = {username}
+        """
+        self.execute(query)
+        res = self.db.fetchone()[0]
+        return res
+    
+    def get_all_users(self):
+        query="""
+        SELECT users.id, users.username, users.user_id, permissions.name
+        FROM users
+        LEFT JOIN permissions
+        ON users.permissions_id = permissions.id
+        """
+        self.execute(query)
+        res = self.db.fetchall()
         return res
     
     def get_fn_perms(self, fn):
@@ -88,8 +109,59 @@ class Database():
         print(query)
         self.execute(query)
         res = self.db.fetchone()
-        print('RES:', res)
         return res
+    
+    def perm_name2id(self, perm):
+        perm = dbfmt(perm)
+        query=f"""
+        SELECT id 
+        FROM permissions
+        WHERE name = {perm}
+        """
+        self.execute(query)
+        res = self.db.fetchone()[0]
+        return res
+
+    def get_all_perms(self):
+        query="""
+        SELECT id, name 
+        FROM permissions
+        """
+        self.execute(query)
+        res = self.db.fetchall()
+        return res
+    
+    def ch_perms(self, new_perm_id, u_id):
+        query = f"""
+        UPDATE users
+        SET permissions_id = {new_perm_id}
+        WHERE id = {u_id}
+        """
+        self.execute(query)
+        self.cnx.commit()
+
+    def uid2perms_uname(self, u_id):
+        query = f"""
+        SELECT users.username, permissions.name
+        FROM users 
+        LEFT JOIN permissions
+        ON users.permissions_id = permissions.id
+        WHERE users.id = {u_id}
+        """
+        self.execute(query)
+        res = self.db.fetchone()
+        return res
+
+    def get_perm(self, perms_id):
+        query = f"""
+        SELECT name 
+        FROM permissions 
+        WHERE id = {perms_id}
+        """
+        self.execute(query)
+        res = self.db.fetchone()
+        return res
+
 
     def menu_fns(self, menu, user_id):
         perm_name, perm_power = self.get_user_perms(user_id)
