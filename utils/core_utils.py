@@ -196,16 +196,20 @@ def compare_perms(agent, reagent, dbi, a_user=False, r_user=False):
         agent = int(agent)
         reagent = int(reagent)
     except ValueError:
+        print('Cannot int')
         return None
+    print('got here')
     if a_user:
         _, a_power = dbi.get_user_perms(agent)
     else:
-        a_power = dbi.perm_dets(agent)
-        
+        _, a_power = dbi.perm_dets(agent)
+    
+    print('A POWER', a_power)
     if r_user:    
         _, r_power = dbi.get_user_perms(reagent)
     else:
-        r_power = dbi.perm_dets(reagent)
+        _, r_power = dbi.perm_dets(reagent)
+    print('R POWER', r_power)
     return a_power >= r_power
 
 def closest_perms(value, dbi):

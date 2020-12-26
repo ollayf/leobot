@@ -79,7 +79,6 @@ class Database():
             ON users.permissions_id = permissions.id
             WHERE users.id = {user_id}
             """
-        print(query)
         self.execute(query)
         res = self.db.fetchone()
         return res
@@ -150,6 +149,10 @@ class Database():
         self.cnx.commit()
 
     def uid2perms_uname(self, u_id):
+        '''
+        Mainly created for ch_perms function to get the users username 
+        and permissions name
+        '''
         query = f"""
         SELECT users.username, permissions.name
         FROM users 

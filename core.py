@@ -266,28 +266,33 @@ def ch_perm(update, context):
     dbi = context.bot_data['dbi']
     # gets id, username, user_id, permissions.name
     args = context.args
-    user, perms = args[0], args[1]
+    uid, perm_id = args[0], args[1]
     print('B4')
-    user = core_utils.closest_user(user, dbi)
-    print('User', user)
-    if not user:
+    uid = core_utils.closest_user(uid, dbi)
+    print('User', uid)
+    if not uid:
         update.message.reply_text(user_ne_error)
         return MENU
-    perms = core_utils.closest_perms(perms, dbi)
-    print('Perms', perms)
-    if not perms:
+    perm_id = core_utils.closest_perms(perm_id, dbi)
+    print('Perms', perm_id)
+    if not perm_id:
         update.message.reply_text(perms_ne_error)
         return MENU
     sender_id = update.message.from_user.id
+    print('Sender id:', sender_id)
     # checks if the user that sent this requests is more powerful than reagent
-    user_allow = core_utils.compare_perms(sender_id, user, True)
+    user_allow = core_utils.compare_perms(sender_id, uid, dbi, True, True)
     # checks if the user that sent this requests is more powerful than the perms he is giving
-    perms_allow = core_utils.compare_perms(sender_id, perms, True)
+    perms_allow = core_utils.compare_perms(sender_id, perm_id, dbi, True)
     if user_allow and perms_allow:
-        old_perm, _ = dbi.get_user_perms(user)
-        dbi.ch_perms(perms, user)
-        msg = ch_perm_msg.format()
-        update.message.reply_text(permi)
+        username, old_perm = dbi.uid2perms_uname(uid)
+        print('Username, Old perm')
+        print(username, old_perm)
+        dbi.ch_perms(perm_id, uid)
+        _, new_perm = dbi.uid2perms_uname(uid)
+        msg = ch_perm_msg.format(username, old_perm, new_perm)
+        print(msg)
+        update.message.reply_text(msg)
     else:
         update.message.reply_text(permission_fail)
 
