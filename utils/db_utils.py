@@ -199,7 +199,6 @@ class Database():
         (permissions.name = {perm_name}
         OR permissions.power < {perm_power})
         """
-        print(query)
         self.execute(query)
         res = self.db.fetchall()
         return res
@@ -313,6 +312,28 @@ class Database():
         self.execute(query)
         self.cnx.commit()
     
+    def del_thread(self, id):
+        # first gets the msg_id of the thread
+        query = f"""
+        SELECT msg_id
+        FROM threads
+        WHERE id = {id}
+        """
+        self.execute(query)
+        msg_id = self.db.fetchone()[0]
+        # deletes the row from the table
+        query = f"""
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = {id}
+        """
+        print('msg id', msg_id)
+        print(query)
+        self.execute(query)
+        self.cnx.commit()
+        return msg_id
+
+
     def new_fb(self, author_id, title, msg, file_id, file_type):
         title = dbfmt(title)
         msg = dbfmt(msg)

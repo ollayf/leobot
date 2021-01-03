@@ -20,15 +20,19 @@ def cancel(update, context):
 
 def end(update, context):
     chosen_msg = random.choice(end_msgs)
+    core_utils.reset_user(context)
     core_utils.ch_menu(context, 'sleep_menu')
     update.message.reply_text(chosen_msg)
-    core_utils.reset_user(context)
     return END
 
-def quit(update, context):
+def quit_m(update, context):
+    dbi = context.bot_data['dbi']
+    user_id = update.message.from_user.id
     core_utils.reset_user(context)
     core_utils.ch_menu(context, 'start_menu')
     update.message.reply_text(quit_msg)
+    menu = core_utils.generate_menu('start_menu', dbi, user_id)
+    update.message.reply_text(text=start_msg.format(menu))
     return QUIT
 
 def timeout(update, context):
@@ -47,7 +51,7 @@ def invalid(update, context):
     update.message.reply_text('INVALID INPUT')
     return INVALID
 
-def help(update, context):
+def help_fns(update, context):
     dbi = context.bot_data['dbi']
     user_id = update.message.from_user.id
     menu = core_utils.curr_menu(context)
@@ -57,7 +61,7 @@ def help(update, context):
 
 # ***** FOR CREATING THREADS *****
 def new_thread(update, context):
-    
+    core_utils.ch_menu(context, action=True)
     context.user_data['temp']['new_thread'] = True
     update.message.reply_text(t_title_msg)
     return TITLE
@@ -78,9 +82,8 @@ def t_cat(update, context):
     dbi = context.bot_data['dbi']
     cats = context.user_data['temp']['cats']
     print('here')
-    try:
-        choice = core_utils.cat_choice(reply, cats)
-    except:
+    choice = core_utils.cat_choice(reply, cats)
+    if not choice:
         print('error found')
         update.message.reply_text(out_of_range_error)
         msg, _ = core_utils.prepare_cats_msg(t_cat_msg, dbi)
@@ -120,6 +123,7 @@ def t_complete(update, context):
     core_utils.log_thread(dbi, thread_id, context, msg, author_id)
     print(str(msg))
     core_utils.reset_user(context)
+    core_utils.ch_menu(context, action=False)
     return COMPLETED
 
 def t_tags(update, context):
@@ -177,6 +181,7 @@ def tc_next(update, context):
 ################
 
 def fb_init(update, context):
+    core_utils.ch_menu(context, action=True)
     update.message.reply_text(fb_title_msg)
     return TITLE
 
@@ -208,6 +213,7 @@ def fb_file(update, context):
     feedback = f"""New Feedback from {username}"""
     context.bot.send_message(owner, feedback)
     update.message.reply_text(fb_complete_msg)
+    core_utils.ch_menu(context, action=False)
     return COMPLETED
 
 ##################
@@ -215,6 +221,7 @@ def fb_file(update, context):
 ##################
 def admin_menu(update, context):
     print('in admin menu')
+    core_utils.ch_menu(context, 'admin_menu')
     dbi = context.bot_data['dbi']
     user_id = update.message.from_user.id
     fn = 'admin_menu'
@@ -222,7 +229,8 @@ def admin_menu(update, context):
     if core_utils.check_permissions(fn, user_id, dbi):
         print('replying')
         username = update.message.from_user.username
-        update.message.reply_text(admin_menu_msg.format(username))
+        menu = core_utils.generate_menu('admin_menu', dbi, user_id)
+        update.message.reply_text(admin_menu_msg.format(username, menu))
         return MENU
     else:
         update.message.reply_text(permission_fail)
@@ -247,10 +255,6 @@ def dview_fb(update, context):
         else:
             core_utils.detview_fb(choice, dbi, update, context)
     return MENU
-
-###########
-# backend #
-###########
 
 def all_members(update, context):
     print('TRYING ALL MEMBERS')
@@ -298,69 +302,41 @@ def ch_perm(update, context):
 
     return MENU
 
-# def sel_user(update, context):
-#     dbi = context.bot_data['dbi']
-#     try:
-#         choice = int(context.args[0])
-#     except ValueError:
-#         update.message.reply_text(not_integer_error)
-#         return USER
-#     user_ids = context.user_data['temp']['users'].keys()
-#     # check if choice is within the possible range
-#     if choice in user_ids:
-#         context.user_data['temp']['choice_uid'] = choice
-#         # gets id, name
-#         perms = dbi.get_all_perms()
-#         context.user_data['temp']['perms'] = \
-#             dict(map(lambda x: [x[0], x[1:]], perms))
-#         msg = core_utils.generate_options(perms, sel_perm_msg)
-#         update.message.reply_text(msg)
-#         return PERMS
-#     # goes back to get u_id again
-#     else:
-#         update.message.reply_text(out_of_range_error)
-#         users = context.bot_data['temp']['users']
-#         msg = core_utils.generate_options(users, sel_user_msg)
-#         update.message.reply_text(msg)
-#         return USER
+def del_threads(update, context):
+    args = context.args
+    chat_id = context.bot_data['chat_id']
+    dbi = context.bot_data['dbi']
+    for arg in args:
+        print('Attempt deleting thread {}'.format(arg))
+        try:
+            arg = int(arg)
+        except ValueError:
+            continue
+        else:
+            msg_id = dbi.del_thread(arg)
+            if msg_id:
+                try:
+                    context.bot.delete_message(chat_id, msg_id, 7.0)
+                except telegram.error.BadRequest:
+                    update.message.reply_text(t_delete_fail.format(arg))
+                else:
+                    update.message.reply_text(t_deleted_msg.format(arg))
 
-
-# def sel_perm(update, context):
-#     dbi = context.bot_data['dbi']
-#     try:
-#         choice = int(context.args[0])
-#     except ValueError:
-#         update.message.reply_text(invalid_input_error)
-#         return PERMS
-#     perm_ids = context.user_data['temp']['perms'].keys()
-#     # check if choice is within range
-#     if choice in perm_ids:
-#         new_perm = dbi.get_perm(choice)
-#         choice_uid = context.bot_data['temp']['choice_uid']
-#         username = context.bot_data['temp']['users'][choice_uid][0]
-#         old_perm = context.bot_data['temp']['users'][choice_uid][2]
-#         update.message.reply_text(ch_perm_msg.format(username, \
-#             old_perm, new_perm))
-#         # Todo make it say smth
-#         return COMPLETED
-#     # goes back to get u_id again
-#     else:
-#         update.message.reply_text(out_of_range_error)
-#         perms = context.bot_data['temp']['perms']
-#         msg = core_utils.generate_options(perms, sel_perm_msg)
-#         update.reply_text(msg)
-#         return PERMS
-
+###########
+# backend #
+###########
 
 def start(update, context):
+    core_utils.reset_user(context)
     user = update.message.from_user
     user_id = user.id
     dbi = context.bot_data['dbi']
+    menu = core_utils.generate_menu('start_menu', dbi, user_id)
+    core_utils.ch_menu(context, 'start_menu')
     if dbi.user_exist(user_id):
-        update.message.reply_text(text=start_msg)
+        update.message.reply_text(text=start_msg.format(menu))
     else:
         username = user.username
         core_utils.initiate_user(dbi, user)
-        update.message.reply_text(text=first_start_msg.format(username))
+        update.message.reply_text(text=first_start_msg.format(username, menu))
     return MENU
-

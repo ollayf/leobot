@@ -117,33 +117,49 @@ def generate_options(options, msg=''):
     return msg
 
 def generate_menu(menu, dbi, user_id, msg=''):
-    msg += '\n\n'
+    menus = ['sleep_menu', 'start_menu', 'admin_menu', 'backend', 'in_action']
+    if isinstance(menu, int):
+        menu = menus[menu]
+    else:
+        assert menu in menus, 'Invalid Menu'
     fns = dbi.menu_fns(menu, user_id)
     for fn in fns:
         line = ' -- '.join(fn)
-        line += '\n'
+        line = '/{}\n'.format(line)
         msg += line
     return msg
 
 def curr_menu(context):
     user_data = context.user_data
-    if user_data['action']:
-        return 'in_action'
-    else:
+    # in case action doesn't exist yet
+    try:
+        action = user_data['action']
+        if action:
+            return 'in_action'
+    except KeyError:
+        pass
+    # in case menu doesn't exist yet
+    try:   
         menu = user_data['menu']
+    except KeyError:
+        return 'sleep_menu'
+    else:
         return menu
 
 def ch_menu(context, menu=None, action=True):
+    '''
+    Changes the menu status for dynamic menu generation
+    '''
+    assert isinstance(action, bool), 'Invalid action input'
     if not menu:
-        if action:
-            context.user_data['action'] = True
-        else:
-            context.user_data['action'] = False
+        context.user_data['action'] = action
     else:
         context.user_data['menu'] = menu
 
 def reset_user(context):
-    context.user_data['temp'].clear()
+    context.user_data['temp'] = dict()
+    context.user_data['menu'] = ''
+
 
 def closest_user(value, dbi):
     # tries to convert into a int if not a string

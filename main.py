@@ -117,10 +117,11 @@ admin_conv = ConversationHandler(
         MENU: [CommandHandler('sview_fb', sview_fb),
             CommandHandler('dview_fb', dview_fb),
             CommandHandler('ch_perm', ch_perm),
-            CommandHandler('all_members', all_members)
+            CommandHandler('all_members', all_members),
+            CommandHandler('del_threads', del_threads)
             ],
     },
-    fallbacks= [CommandHandler('quit', quit),
+    fallbacks= [CommandHandler('quit', quit_m),
                 CommandHandler('end', end)],
     map_to_parent= {
         END: END,
@@ -133,7 +134,7 @@ be_conv = ConversationHandler(
     states={
         MENU: [],
     },
-    fallbacks= [CommandHandler('quit', quit),
+    fallbacks= [CommandHandler('quit', quit_m),
                 CommandHandler('end', end)],
     map_to_parent= {
         END: END,
@@ -165,9 +166,8 @@ start_conv = ConversationHandler(
 #     update.message.reply_text('Not real command')
 
 # dispatcher.add_handler(MessageHandler(Filters.command, not_command), group=1)
-dispatcher.add_handler(CommandHandler('help', help))
+dispatcher.add_handler(CommandHandler('help', help_fns))
 dispatcher.add_handler(start_conv)
 
 updater.start_polling()
-updater.idle()
 dbi.close()
