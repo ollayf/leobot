@@ -3,70 +3,171 @@ This script compiles the requirements for the bot and runs it on a loop
 It should also contain the functions of the bot
 '''
 
-from env import *
-from utils import *
+from config import *
+from core import *
 import telegram
 import datetime
 import time
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, PicklePersistence
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, \
+ConversationHandler, CallbackQueryHandler
 import logging
 import random
 from pytz import timezone
 import emojis
 import argparse
+import utils.db_utils as db_utils
 
-print('initialised')
+print('initialising')
 
-# setting up deployment environment config (REMOVE IF YOU ARE NOT USING CONFIG FILE BUT IT IS GOOD PRACTICE)
+# setting up deployment environment env (REMOVE IF YOU ARE NOT USING env FILE BUT IT IS GOOD PRACTICE)
 testing = True
 
 import configparser
 config = configparser.ConfigParser()
-config.read('bots.cfg')
+config.read('bot.cfg')
 
 if testing:
-    deploy_config = config['testing']
+    bot_config = dict(config['test_bot'])
+    print(str(config))
+    dbi = db_utils.Database(config, 'test_db')
 else:
-    deploy_config = config['live']
+    bot_config = config['live_bot']
+    dbi = db_utils.Database(config, 'live_db')
 
-updater = Updater(token=deploy_config['token'], use_context=True)
+# TODO: ACTUAL DEPLOYMENT CHANGE
+owner = config['owners']['fei']
+
+updater = Updater(token=bot_config['token'], use_context=True)
 dispatcher = updater.dispatcher # for quicker access to the dispatcher object
 jobqueuer = updater.job_queue # for quicker access to JobQueue object
-
-owner = config['owners']['fei']
-chat = deploy_config['chat_id']
 
 # logs the problems in log.md file with level INFO
 logging.basicConfig(filename='storage/error_log.txt', format='%(asctime)s - %(name)s - \
                     %(levelname)s - %(message)s', level=logging.INFO)
 
-dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised
+core_utils.setup_bot_data(dispatcher, owner, bot_config, dbi, testing)
 
-def process_members(update, context):
-    '''
-    Processes the changes in member data i.e. when the user first starts the bot.
-    This function being in group 0 make sure it is the highest priority and runs in parallel with other
-    callback functions
-    '''
-    pass
+msg_return = dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised
+print('Message Return', str(msg_return))
 
-dispatcher.add_handler(MessageHandler(Filters.text, process_members), group=0) # gives most prirority
+################
+# TESTING ZONE #
+################
+# dbi.new_category('Testimony', des= 'Heartfelt personal sharing')
+# dbi.cat_id('Testimony')
 
-def process_msg(update, context):
-    '''
-    Processes messages that are not commands i.e. a response to a prompt by the bot
-    Make sure this is the last callback function to grant lowest priority to because this means that 
-    the person is clearly not trying to call another function
-    '''
-    pass
+# def process_members(update, context):
+#     '''
+#     Processes the changes in member data i.e. when the user first starts the bot.
+#     This function being in group 0 make sure it is the highest priority and runs in parallel with other
+#     callback functions
+#     '''
+#     # for easier access to user_id
+#     user_id = update.message.from_user.id
 
-dispatcher.add_handler(MessageHandler(Filters.text, process_msg), group=1)
+#     # initiates the user if it is his first time
+#     initiate_user(user_id, update, context) # in utils
 
-#TODO: THIS IS WHERE THE LIST OF FUNCTIONS WILL BE
-# Important keywords:
-# start - starting a conversation with the bot
-# cancel - the act of cancelling an action when the user is in the middle of one
-# quit - the act of leaving a menu to return to the start (or main) menu
-# end - opposite of starting, aka ending the conversation with bot, all memory is cleared
+#     # updates the permission according to quits by the coder
+#     # check_for_personal_changes(update, context)
+
+# dispatcher.add_handler(MessageHandler(Filters.text, process_members), group=0) # gives most prirority
+new_thread_conv = ConversationHandler(
+    entry_points=[CommandHandler('new_thread', new_thread)],
+    states={
+        TITLE: [MessageHandler(Filters.text & ~Filters.command, t_title)],
+        CAT: [MessageHandler(Filters.text & ~Filters.command, t_cat)],
+        BODY: [MessageHandler(Filters.text & ~Filters.command, t_body)],
+        FILE: [core_utils.file_handler(t_file),
+                CommandHandler('no', t_file)],
+        TAGS: [MessageHandler(Filters.text & ~Filters.command, t_tags)],
+        TC: [MessageHandler(Filters.text & ~Filters.command, tc_next)]
+
+    },
+    fallbacks= [CommandHandler('cancel', cancel),
+                CommandHandler('end', end)],
+    map_to_parent= {
+        COMPLETED: MENU,
+        END: END,
+        CANCEL: MENU
+    }
+)
+
+feedback_conv = ConversationHandler(
+    entry_points=[CommandHandler('feedback', fb_init)],
+    states={
+        TITLE: [MessageHandler(Filters.text & ~Filters.command, \
+            fb_title)],
+        BODY: [MessageHandler(Filters.text & ~Filters.command, fb_body)],
+        FILE: [core_utils.file_handler(fb_file),
+                CommandHandler('no', fb_file)]
+    },
+    fallbacks= [CommandHandler('cancel', cancel),
+                CommandHandler('end', end)],
+    map_to_parent= {
+        COMPLETED: MENU,
+        END: END,
+        CANCEL: MENU
+    }
+)
+
+admin_conv = ConversationHandler(
+    entry_points=[CommandHandler('admin_menu', admin_menu)],
+    states={
+        MENU: [CommandHandler('sview_fb', sview_fb),
+            CommandHandler('dview_fb', dview_fb),
+            CommandHandler('ch_perm', ch_perm),
+            CommandHandler('all_members', all_members),
+            CommandHandler('del_threads', del_threads)
+            ],
+    },
+    fallbacks= [CommandHandler('quit', quit_m),
+                CommandHandler('end', end)],
+    map_to_parent= {
+        END: END,
+        QUIT: MENU
+    }
+)
+
+be_conv = ConversationHandler(
+    entry_points=[CommandHandler('backend', admin_menu)],
+    states={
+        MENU: [],
+    },
+    fallbacks= [CommandHandler('quit', quit_m),
+                CommandHandler('end', end)],
+    map_to_parent= {
+        END: END,
+        QUIT: MENU
+    }
+)
+
+start_conv = ConversationHandler(
+    entry_points=[CommandHandler('start', start)],
+    states={
+        MENU: [
+            new_thread_conv,
+            feedback_conv,
+            admin_conv,
+            ],
+        END: [CommandHandler('start', start)],
+        TIMEOUT: [MessageHandler(Filters.text, timeout)]
+    },
+    fallbacks= [CommandHandler('end', end)],
+    conversation_timeout=600
+)
+
+# def not_command(update, context):
+#     '''
+#     Processes messages that are not commands i.e. a response to a prompt by the bot
+#     Make sure this is the last callback function to grant lowest priority to because this means that 
+#     the person is clearly not trying to call another function
+#     '''
+#     update.message.reply_text('Not real command')
+
+# dispatcher.add_handler(MessageHandler(Filters.command, not_command), group=1)
+dispatcher.add_handler(CommandHandler('help', help_fns))
+dispatcher.add_handler(start_conv)
 
 updater.start_polling()
+dbi.close()

@@ -1,0 +1,4 @@
+./server.sh: 1: source: not found
+./server.sh: 2: workon: not found
+./server.sh: 4: ./server.sh: 3: disown: not foundpython: not found
+

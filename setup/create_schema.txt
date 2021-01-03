@@ -1,0 +1,89 @@
+CREATE TABLE permissions (
+    id int AUTO_INCREMENT,
+    level varchar(50) NOT NULL,
+    power int NOT NULL,
+    PRIMARY KEY (user_id)
+);
+
+INSERT INTO permissions (level, power) 
+	VALUES
+		('members', 0),
+		('admin', 10),
+		('devs', 100);
+
+CREATE TABLE users (
+    user_id int NOT NULL,
+    permissions_id int NOT NULL DEFAULT 1,
+    last_action int,
+    last_activity datetime,
+    username varchar(50) NOT NULL,
+    firstname varchar(50),
+    lastname varchar(50),
+    foreign key (permissions_id) REFERENCES permissions(id),
+    PRIMARY KEY (user_id)
+);
+
+# havent linked last_action => function id
+
+CREATE TABLE functions (
+    id int NOT NULL,
+    name varchar(20) NOT NULL),
+    description varchar(50),
+    added_vers varchar(10),
+    added_dt datetime
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE categories(
+    category_id int AUTO_INCREMENT,
+    parent_id int,
+    name varchar(50),
+    description text,
+    tag bit NOT NULL,
+    PRIMARY KEY(category_id)
+);
+
+ALTER TABLE categories 
+ADD FOREIGN KEY(parent_id)
+REFERENCES categories(category_id)
+ON DELETE SET NULL;
+
+CREATE TABLE comments (
+    msg_id int NOT NULL,
+    thread_id int NOT NULL,
+    user_id int,
+    msg text NOT NULL,
+    time_posted datetime NOT NULL,
+    PRIMARY KEY(msg_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    );
+
+CREATE TABLE threads (
+    msg_id int NOT NULL,
+    parent_id int,
+    category_id int,
+    msg text NOT NULL,
+    post_time datetime NOT NULL,
+    title text NOT NULL,
+    likes int default 0,
+    origin_id int,
+    PRIMARY KEY (msg_id),
+    FOREIGN KEY (origin_id) REFERENCES users(user_id)
+    );
+
+ALTER TABLE threads 
+ADD FOREIGN KEY(parent_id)
+REFERENCES threads(msg_id)
+ON DELETE SET NULL;
+
+CREATE TABLE actions (
+    action_id int auto_increment,
+    msg_id INT,
+    function_id INT,
+    action_dt datetime NOT NULL,
+    user_id int NOT NULL,
+    primary key(action_id),
+    FOREIGN KEY(user_id) REFERENCES users(user_id),
+    FOREIGN KEY(function
+    );
+    
