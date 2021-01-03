@@ -243,7 +243,7 @@ class Database():
         self.cnx.commit()
 
 
-    def new_user(self, user_id, username, firstname, lastname, permissions_id=7):
+    def new_user(self, user_id, username, firstname, lastname, permissions_id=1):
         user_id = int(user_id)
         firstname, lastname = dbfmt(firstname), dbfmt(lastname)
 

@@ -4,7 +4,6 @@ leobot
 *.cfg
 __pycache__
 storage
-__pycache__
 .vscode
 yeet_test.py
 logic_tests.py
