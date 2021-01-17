@@ -227,7 +227,7 @@ class Database():
 
 
     def new_fn(self, name, desc, sleep_menu, start_menu, admin_menu, backend, 
-        all_menu, in_action=0, permissions_id=4):
+        all_menu, in_action=0, permissions_id=1):
         name = dbfmt(name)
         desc = dbfmt(desc)
         query = f"""

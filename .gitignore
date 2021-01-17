@@ -3,7 +3,6 @@ leobot
 .idea
 *.cfg
 __pycache__
-storage
 .vscode
 yeet_test.py
 logic_tests.py
