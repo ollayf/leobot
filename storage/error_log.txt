@@ -1,0 +1,516 @@
+2021-01-17 05:33:44,408 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-17 05:34:05,394 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-17 05:34:07,604 - apscheduler.scheduler -                     INFO - Removed job dca8127fd40f4f20a0d8fd27fe570ef1
+2021-01-17 05:34:55,281 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-17 05:34:57,167 - apscheduler.scheduler -                     INFO - Removed job ddc4db49abad408bbbe2c3b53adf0fd6
+2021-01-17 05:39:38,506 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-17 05:39:50,457 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-17 05:39:51,503 - apscheduler.scheduler -                     INFO - Removed job 28a7feca59ba4ebfa24642edb40c093a
+2021-01-18 10:40:47,516 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 334, in start
+    menu = core_utils.generate_menu('start_menu', dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 125, in generate_menu
+    fns = dbi.menu_fns(menu, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/db_utils.py", line 188, in menu_fns
+    perm_name, perm_power = self.get_user_perms(user_id)
+TypeError: cannot unpack non-iterable NoneType object
+2021-01-18 10:42:08,572 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 10:42:10,350 - apscheduler.scheduler -                     INFO - Removed job 51e7b993e141465892de0eb958e3bd2b
+2021-01-18 11:56:06,530 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 11:56:06,531 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 11:56:06,531 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:02:18,310 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 346, in start
+    inform_owners(newbie_msg.format(username))
+TypeError: inform_owners() missing 1 required positional argument: 'context'
+2021-01-18 12:02:56,009 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 346, in start
+    inform_owners(newbie_msg.format(username))
+TypeError: inform_owners() missing 1 required positional argument: 'context'
+2021-01-18 12:02:56,694 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 346, in start
+    inform_owners(newbie_msg.format(username))
+TypeError: inform_owners() missing 1 required positional argument: 'context'
+2021-01-18 12:02:56,865 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 346, in start
+    inform_owners(newbie_msg.format(username))
+TypeError: inform_owners() missing 1 required positional argument: 'context'
+2021-01-18 12:14:45,831 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:14:45,832 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:14:45,832 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:14:46,837 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 342, in start
+    menu = core_utils.generate_menu('start_menu', dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 125, in generate_menu
+    fns = dbi.menu_fns(menu, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/db_utils.py", line 202, in menu_fns
+    self.execute(query)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/db_utils.py", line 63, in execute
+    self.db.execute(query)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/mysql/connector/cursor.py", line 569, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/mysql/connector/connection.py", line 651, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/mysql/connector/connection.py", line 538, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'functions.start_menu' in 'where clause'
+2021-01-18 12:14:46,935 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 342, in start
+    menu = core_utils.generate_menu('start_menu', dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 125, in generate_menu
+    fns = dbi.menu_fns(menu, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/db_utils.py", line 202, in menu_fns
+    self.execute(query)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/db_utils.py", line 63, in execute
+    self.db.execute(query)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/mysql/connector/cursor.py", line 569, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/mysql/connector/connection.py", line 651, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/mysql/connector/connection.py", line 538, in _handle_result
+    raise errors.get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'functions.start_menu' in 'where clause'
+2021-01-18 12:17:43,953 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:17:43,954 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:17:43,955 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:17:46,277 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:17:47,164 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:17:55,981 - apscheduler.scheduler -                     INFO - Removed job 7a350ca7a2874dff927e494df054ae43
+2021-01-18 12:19:07,472 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:19:07,473 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:19:07,474 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:19:57,285 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:19:57,286 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:19:57,286 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:19:58,004 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:19:58,005 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:02,187 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:02,188 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:03,358 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:03,359 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:08,187 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:08,188 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:09,859 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:09,860 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:15,868 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:15,869 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:18,316 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:18,317 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:21,875 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:21,876 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:25,423 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:25,424 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:30,685 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:30,686 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:35,921 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:35,922 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:43,690 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:43,691 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:20:55,638 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:20:55,639 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:20:55,639 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:22:26,691 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:22:26,692 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:22:26,693 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:22:27,595 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:27,596 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:31,763 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:31,764 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:32,935 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:32,936 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:37,604 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:37,605 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:39,274 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:39,274 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:44,861 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:44,862 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:47,285 - telegram.ext.updater -                     ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:22:47,286 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 419, in _network_loop_retry
+    if not action_cb():
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/updater.py", line 373, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 2262, in get_updates
+    result = self._post('getUpdates', data, timeout=float(read_latency) + float(timeout),
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 254, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-01-18 12:23:20,683 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:23:20,684 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:23:20,684 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:23:22,285 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:23:22,287 - apscheduler.scheduler -                     INFO - Removed job 97f40a2c9cdd44d89eb8a528da6dd6ec
+2021-01-18 12:23:23,010 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:23:23,391 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:23:23,393 - apscheduler.scheduler -                     INFO - Removed job 164ec7f13f2047488cfb03eb2d25cb31
+2021-01-18 12:23:51,340 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:23:51,341 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:23:51,341 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:24:31,235 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 12:24:31,236 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 12:24:31,236 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 12:24:46,088 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:24:47,437 - apscheduler.scheduler -                     INFO - Removed job 23f201b6a30c48dcace94f16a7c6a00f
