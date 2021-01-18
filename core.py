@@ -331,12 +331,15 @@ def start(update, context):
     user = update.message.from_user
     user_id = user.id
     dbi = context.bot_data['dbi']
-    menu = core_utils.generate_menu('start_menu', dbi, user_id)
-    core_utils.ch_menu(context, 'start_menu')
+    
     if dbi.user_exist(user_id):
+        menu = core_utils.generate_menu('start_menu', dbi, user_id)
         update.message.reply_text(text=start_msg.format(menu))
     else:
         username = user.username
         core_utils.initiate_user(dbi, user)
+        menu = core_utils.generate_menu('start_menu', dbi, user_id)
         update.message.reply_text(text=first_start_msg.format(username, menu))
+    # changes the menu when it is done
+    core_utils.ch_menu(context, 'start_menu')
     return MENU
