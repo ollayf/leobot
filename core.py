@@ -343,7 +343,7 @@ def start(update, context):
         update.message.reply_text(text=start_msg.format(menu))
     else:
         username = user.username
-        inform_owners(newbie_msg.format(username))
+        inform_owners(newbie_msg.format(username), context)
         core_utils.initiate_user(dbi, user)
         menu = core_utils.generate_menu('start_menu', dbi, user_id)
         update.message.reply_text(text=first_start_msg.format(username, menu))

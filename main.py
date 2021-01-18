@@ -16,11 +16,15 @@ from pytz import timezone
 import emojis
 import argparse
 import utils.db_utils as db_utils
+import argparse
 
 print('initialising')
-
+# checks if this should be run ion testing env
+parser = argparse.ArgumentParser(description='Runs the leobot service')
+parser.add_argument('t', 'testing', type=bool, help='Whether you want to run in testing env')
+args = parser.parse_args()
 # setting up deployment environment env (REMOVE IF YOU ARE NOT USING env FILE BUT IT IS GOOD PRACTICE)
-testing = True
+testing = args.testing
 
 import configparser
 config = configparser.ConfigParser()
