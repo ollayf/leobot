@@ -11,6 +11,12 @@ import utils.core_utils as core_utils
 import utils.logic as logic
 import random
 
+
+# quick send owners
+def inform_owners(msg, context):
+    owner = context.bot_data['owner']
+    context.bot.send_message(owner, str(msg))
+
 # ***** FUNDAMENTALS *****
 def cancel(update, context):
     core_utils.reset_user(context)
@@ -337,6 +343,7 @@ def start(update, context):
         update.message.reply_text(text=start_msg.format(menu))
     else:
         username = user.username
+        inform_owners(newbie_msg.format(username))
         core_utils.initiate_user(dbi, user)
         menu = core_utils.generate_menu('start_menu', dbi, user_id)
         update.message.reply_text(text=first_start_msg.format(username, menu))

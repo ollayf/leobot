@@ -20,6 +20,8 @@ bot_init_msg = 'Energise!'
 ###########
 # threads #
 ###########
+newbie_msg = 'New Member added: {}'
+daily_msg = 'Good Morning Sir, up and running today!'
 t_title_msg = 'May I have the title of your thread?'
 t_cat_msg = 'Which category can this thread be considered under?'
 t_body_msg = 'What is the main content or body of your thread?'

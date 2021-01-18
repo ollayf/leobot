@@ -169,5 +169,12 @@ start_conv = ConversationHandler(
 dispatcher.add_handler(CommandHandler('help', help_fns))
 dispatcher.add_handler(start_conv)
 
+def remind_events(context):
+    # TODO: Make bot record events and remind people
+    inform_owners(daily_msg, context)
+
+event_reminder = jobqueuer.run_daily(callback=remind_events,\
+    time=datetime.time(8, 0, 0, 0, tzinfo=timezone('Singapore')))
+
 updater.start_polling()
 dbi.close()
