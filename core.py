@@ -350,3 +350,16 @@ def start(update, context):
     # changes the menu when it is done
     core_utils.ch_menu(context, 'start_menu')
     return MENU
+
+#########
+# DEBUG #
+#########
+
+def cache(update, context):
+    '''
+    For debugging purposes
+    Call to send the user their user_data
+    This shouldnt be in the code for long
+    '''
+    user_data = context.user_data
+    update.message.reply_text(user_data)

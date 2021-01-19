@@ -171,6 +171,7 @@ start_conv = ConversationHandler(
 
 # dispatcher.add_handler(MessageHandler(Filters.command, not_command), group=1)
 dispatcher.add_handler(CommandHandler('help', help_fns))
+dispatcher.add_handler(CommandHandler('cache', cache))
 dispatcher.add_handler(start_conv)
 
 def remind_events(context):
