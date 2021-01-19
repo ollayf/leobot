@@ -6,6 +6,7 @@ import telegram
 import time
 from functools import wraps
 from leo_msgs import *
+import re
 
 ####################
 # INITIALISING BOT #
@@ -349,10 +350,12 @@ def parse_tags(msg):
         if isinstance(tag, list):
             tag = list(map(lambda x: x.capitalize(), tag))
             new_tag = '_'.join(tag)
+            new_tag = re.sub('\W', '', new_tag)
             final_tags.append(new_tag)
         elif isinstance(tag, str):
             tag = tag.capitalize()
             final_tags.append(tag)
+            new_tag = re.sub('\W', '', new_tag)
     
     return final_tags
 

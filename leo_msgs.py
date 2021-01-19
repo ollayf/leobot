@@ -28,7 +28,8 @@ t_body_msg = 'What is the main content or body of your thread?'
 t_file_msg = 'Is there any file you would like to include? Currently \
 we accept: Audio, Video, Images, Voice Messages, Documents \n\
 /no if you do not want to submit a file'
-t_tags_msg = 'Are there any tags you would like to include?'
+t_tags_msg = 'Are there any tags you would like to include?\
+For multiple tags, you can separate all of them by commas'
 t_tagger_msg = 'There are some tags that are new to our database. \
 It is important to ensure consistency in tag names so that people can \
 see your posts.'
