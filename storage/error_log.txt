@@ -514,3 +514,512 @@ telegram.error.Conflict: Conflict: terminated by other getUpdates request; make 
 2021-01-18 12:24:31,236 - apscheduler.scheduler -                     INFO - Scheduler started
 2021-01-18 12:24:46,088 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
 2021-01-18 12:24:47,437 - apscheduler.scheduler -                     INFO - Removed job 23f201b6a30c48dcace94f16a7c6a00f
+2021-01-18 12:29:37,136 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:32:48,802 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:32:54,046 - apscheduler.scheduler -                     INFO - Removed job 7f04c8a42cbb4a01b1dca33db79fb478
+2021-01-18 12:32:54,410 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 12:39:37,137 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-18 12:39:37 UTC], next run at: 2021-01-18 12:39:37 UTC)" (scheduled at 2021-01-18 12:39:37.135851+00:00)
+2021-01-18 12:39:37,138 - apscheduler.scheduler -                     INFO - Removed job 5abf68adf0c54c62bf588413bd013148
+2021-01-18 12:39:37,532 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-18 12:39:37 UTC], next run at: 2021-01-18 12:39:37 UTC)" executed successfully
+2021-01-18 12:42:54,414 - apscheduler.scheduler -                     INFO - Removed job ed9c796199a84843ab2edd889d997cba
+2021-01-18 12:42:54,414 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-18 12:42:54 UTC], next run at: 2021-01-18 12:42:54 UTC)" (scheduled at 2021-01-18 12:42:54.409469+00:00)
+2021-01-18 12:42:54,810 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-18 12:42:54 UTC], next run at: 2021-01-18 12:42:54 UTC)" executed successfully
+2021-01-18 13:37:40,433 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 13:47:40,433 - apscheduler.scheduler -                     INFO - Removed job b33a1497f90a4598b9968816382cf98e
+2021-01-18 13:47:40,433 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-18 13:47:40 UTC], next run at: 2021-01-18 13:47:40 UTC)" (scheduled at 2021-01-18 13:47:40.432235+00:00)
+2021-01-18 13:47:40,856 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-18 13:47:40 UTC], next run at: 2021-01-18 13:47:40 UTC)" executed successfully
+2021-01-18 13:49:00,223 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 13:59:00,223 - apscheduler.scheduler -                     INFO - Removed job 7de451a2b8164ed29780150d38ecf343
+2021-01-18 13:59:00,223 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-18 13:59:00 UTC], next run at: 2021-01-18 13:59:00 UTC)" (scheduled at 2021-01-18 13:59:00.222313+00:00)
+2021-01-18 13:59:00,609 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-18 13:59:00 UTC], next run at: 2021-01-18 13:59:00 UTC)" executed successfully
+2021-01-18 14:38:48,199 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 14:38:48,200 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 14:38:48,200 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 14:39:00,390 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:39:03,433 - apscheduler.scheduler -                     INFO - Removed job c3674da453b2482a92afac4abcb9cbf4
+2021-01-18 14:39:03,811 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:39:40,911 - apscheduler.scheduler -                     INFO - Removed job 4d861a823c1544798a1a58b380955c29
+2021-01-18 14:39:41,412 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:39:44,904 - apscheduler.scheduler -                     INFO - Removed job 7a8f9bc0064e4ea888286ce781f2ea26
+2021-01-18 14:39:45,261 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:39:47,977 - apscheduler.scheduler -                     INFO - Removed job 2b9ef01477ae4252a58339df7f74dd62
+2021-01-18 14:39:48,335 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:39:49,876 - apscheduler.scheduler -                     INFO - Removed job 018031ae705847838eba57b01e8e6be5
+2021-01-18 14:39:50,237 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:40:01,103 - apscheduler.scheduler -                     INFO - Removed job 784d9c23312547f6bb8018fd57cf9833
+2021-01-18 14:40:02,742 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:40:45,055 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-18 14:40:45,057 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-18 14:40:45,057 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-18 14:42:08,895 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:42:09,721 - apscheduler.scheduler -                     INFO - Removed job 060821a006df4e348442d243eadd7163
+2021-01-18 14:42:10,083 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:42:12,360 - apscheduler.scheduler -                     INFO - Removed job 874638000fd8437eaa1c749a4de2dc13
+2021-01-18 14:42:12,761 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:42:16,019 - apscheduler.scheduler -                     INFO - Removed job 51a9525e974d4c71b1ae9d29c8333ada
+2021-01-18 14:42:16,379 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:42:17,445 - apscheduler.scheduler -                     INFO - Removed job 423a3c0bec9f4aa788f73f5d79a493ab
+2021-01-18 14:42:17,816 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:42:20,040 - apscheduler.scheduler -                     INFO - Removed job e35630fcac884e179b7850e7b55cfda4
+2021-01-18 14:42:20,396 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:42:24,034 - apscheduler.scheduler -                     INFO - Removed job 815a33828b1b44c9903f0926a8518352
+2021-01-18 14:42:25,070 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:44:14,935 - apscheduler.scheduler -                     INFO - Removed job 91bb4ec34daa47879531be5cdab786d8
+2021-01-18 14:44:15,319 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:44:17,068 - apscheduler.scheduler -                     INFO - Removed job eb8fed7ad81846b8b2284422fc5e9df5
+2021-01-18 14:44:17,444 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:44:18,675 - apscheduler.scheduler -                     INFO - Removed job cbe9d3ebebe246a2902f99b7984be69f
+2021-01-18 14:44:19,033 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:44:25,379 - apscheduler.scheduler -                     INFO - Removed job 9a3545cd186049bd923e1ed92981a885
+2021-01-18 14:44:25,748 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:44:27,398 - apscheduler.scheduler -                     INFO - Removed job 0a2727cfcbdd48d4ab24586e489b6353
+2021-01-18 14:44:27,783 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:44:32,445 - apscheduler.scheduler -                     INFO - Removed job 27881a2aba3742c89fc76c690ac8d840
+2021-01-18 14:44:33,250 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:44:36,755 - apscheduler.scheduler -                     INFO - Removed job fa719073781d4af9ac1bd77436251a10
+2021-01-18 14:44:37,895 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 14:54:37,895 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-18 14:54:37 UTC], next run at: 2021-01-18 14:54:37 UTC)" (scheduled at 2021-01-18 14:54:37.894059+00:00)
+2021-01-18 14:54:37,896 - apscheduler.scheduler -                     INFO - Removed job 075f5c362de742cfa90b753126c0ff61
+2021-01-18 14:54:38,301 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-18 14:54:37 UTC], next run at: 2021-01-18 14:54:37 UTC)" executed successfully
+2021-01-18 15:01:14,420 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:01:17,981 - apscheduler.scheduler -                     INFO - Removed job e7be8bea874b45cba7b20c928e4be260
+2021-01-18 15:01:18,355 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:01:29,511 - apscheduler.scheduler -                     INFO - Removed job 93d3c897db944d4095dbfdf8b50b4814
+2021-01-18 15:01:29,875 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:03:32,453 - apscheduler.scheduler -                     INFO - Removed job d7fdf2f3a5f0474b88a9a8d1f4540f82
+2021-01-18 15:03:32,454 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 91, in t_cat
+    choice = core_utils.cat_choice(reply, cats)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 341, in cat_choice
+    cat = cats[choice][0]
+KeyError: 2
+2021-01-18 15:03:44,241 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:04:01,133 - apscheduler.scheduler -                     INFO - Removed job 10f82b72482148ffbbe0161ac895bdfd
+2021-01-18 15:04:01,504 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:04:14,971 - apscheduler.scheduler -                     INFO - Removed job 481bcbd36491494eadabdf2cb2b48c9c
+2021-01-18 15:04:15,346 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:04:20,490 - apscheduler.scheduler -                     INFO - Removed job 6cb08ee62fb64cf08d7143989ad3d48e
+2021-01-18 15:04:21,225 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:04:26,631 - apscheduler.scheduler -                     INFO - Removed job 2ba5411d69f74268830a35f62f8d7446
+2021-01-18 15:04:27,418 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 181, in tc_next
+    return t_complete(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 126, in t_complete
+    msg = core_utils.post_thread(update, context, content, chat_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 398, in post_thread
+    msg = fn(chat_id, user_data['temp']['file_id'], caption=content,\
+  File "<decorator-gen-7>", line 2, in send_document
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 717, in send_document
+    return self._message('sendDocument', data, timeout=timeout,  # type: ignore[return-value]
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: character '#' is reserved and must be escaped with the preceding '\'
+2021-01-18 15:22:53,825 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-18 15:32:53,825 - apscheduler.scheduler -                     INFO - Removed job a2d98e2ff1f348929b789c983aca5874
+2021-01-18 15:32:53,825 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-18 15:32:53 UTC], next run at: 2021-01-18 15:32:53 UTC)" (scheduled at 2021-01-18 15:32:53.824242+00:00)
+2021-01-18 15:32:54,236 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-18 15:32:53 UTC], next run at: 2021-01-18 15:32:53 UTC)" executed successfully
+2021-01-19 00:00:00,005 - apscheduler.executors.default -                     INFO - Running job "remind_events (trigger: cron[day_of_week='0,1,2,3,4,5,6', hour='8', minute='0', second='0'], next run at: 2021-01-20 08:00:00 +08)" (scheduled at 2021-01-19 08:00:00+08:00)
+2021-01-19 00:00:00,922 - apscheduler.executors.default -                     INFO - Job "remind_events (trigger: cron[day_of_week='0,1,2,3,4,5,6', hour='8', minute='0', second='0'], next run at: 2021-01-20 08:00:00 +08)" executed successfully
+2021-01-19 09:19:54,269 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 09:19:56,028 - apscheduler.scheduler -                     INFO - Removed job 470f83be7abe4cd78cf3fddd4b08b976
+2021-01-19 09:19:56,405 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 09:20:03,372 - apscheduler.scheduler -                     INFO - Removed job 33d1fb81ad1d47b2aa50e7938dd3ff7b
+2021-01-19 09:20:03,748 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 09:20:06,443 - apscheduler.scheduler -                     INFO - Removed job d5f6b5ffae134fa288cb177d362c5b3e
+2021-01-19 09:20:06,846 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 09:20:29,283 - apscheduler.scheduler -                     INFO - Removed job ed7c5380a4d1461f93bcf1ba9cd3bcd6
+2021-01-19 09:20:29,658 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 09:20:57,768 - apscheduler.scheduler -                     INFO - Removed job 63b8f0f9431949e98879d18ce8d76e1d
+2021-01-19 09:20:58,153 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 09:21:27,854 - apscheduler.scheduler -                     INFO - Removed job 728b513c35464b8fba6fae557a7a2d49
+2021-01-19 09:21:28,680 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 09:21:41,369 - apscheduler.scheduler -                     INFO - Removed job 2e2c13d6a46e44ed8d0d49a2f1f20991
+2021-01-19 09:21:42,503 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 181, in tc_next
+    return t_complete(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 126, in t_complete
+    msg = core_utils.post_thread(update, context, content, chat_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 398, in post_thread
+    msg = fn(chat_id, user_data['temp']['file_id'], caption=content,\
+  File "<decorator-gen-5>", line 2, in send_photo
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 535, in send_photo
+    return self._message('sendPhoto', data,  # type: ignore[return-value]
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: character '#' is reserved and must be escaped with the preceding '\'
+2021-01-19 12:36:59,366 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:37:02,800 - apscheduler.scheduler -                     INFO - Removed job 56062340db924f3db1626a1e1a5cbe19
+2021-01-19 12:37:03,169 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:37:09,253 - apscheduler.scheduler -                     INFO - Removed job 68f0683b33d0496da7d7df3e27dbaecc
+2021-01-19 12:37:09,615 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:37:18,162 - apscheduler.scheduler -                     INFO - Removed job 3586af81025a4d4890616ce92ba11f77
+2021-01-19 12:37:18,549 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:37:25,226 - apscheduler.scheduler -                     INFO - Removed job 8ba88efcab244a53ba6238eea54a05f8
+2021-01-19 12:37:25,597 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:37:29,081 - apscheduler.scheduler -                     INFO - Removed job a80feff02d764092b0c890eec1deab18
+2021-01-19 12:37:29,450 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:37:34,154 - apscheduler.scheduler -                     INFO - Removed job 85f4bae886ba45c8ba00d2a529c3dae2
+2021-01-19 12:37:34,942 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:37:42,428 - apscheduler.scheduler -                     INFO - Removed job 670324a370a44e04a4547e79a58a7e48
+2021-01-19 12:37:43,857 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:42:41,033 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:42:54,843 - apscheduler.scheduler -                     INFO - Removed job 752882b7d1a145789b13e2ecc1eb1330
+2021-01-19 12:42:55,203 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:43:00,373 - apscheduler.scheduler -                     INFO - Removed job cf972533de974c69855be58f3daf2519
+2021-01-19 12:43:00,730 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:43:05,597 - apscheduler.scheduler -                     INFO - Removed job fba4d2c593f5499c944343edf33779eb
+2021-01-19 12:43:06,444 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:43:08,974 - apscheduler.scheduler -                     INFO - Removed job e68db284acfc4437a2b16aab597c6954
+2021-01-19 12:43:09,338 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:43:13,891 - apscheduler.scheduler -                     INFO - Removed job 08ad8ce37b2349d79a606b7d9fdafb6a
+2021-01-19 12:43:14,251 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:43:18,808 - apscheduler.scheduler -                     INFO - Removed job 6ce21604b13a4410afd6db8cbe702c41
+2021-01-19 12:43:19,195 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:43:26,484 - apscheduler.scheduler -                     INFO - Removed job e2a79f9998bd45c29ca358a7d8c48cb7
+2021-01-19 12:43:27,323 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:43:34,780 - apscheduler.scheduler -                     INFO - Removed job 86a459979bdf46fcade45c9c6a14b21c
+2021-01-19 12:43:35,796 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:44:16,726 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 64, in help_fns
+    menu_str = core_utils.generate_menu(menu, dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 124, in generate_menu
+    assert menu in menus, 'Invalid Menu'
+AssertionError: Invalid Menu
+2021-01-19 12:44:22,395 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 64, in help_fns
+    menu_str = core_utils.generate_menu(menu, dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 124, in generate_menu
+    assert menu in menus, 'Invalid Menu'
+AssertionError: Invalid Menu
+2021-01-19 12:44:24,328 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 64, in help_fns
+    menu_str = core_utils.generate_menu(menu, dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 124, in generate_menu
+    assert menu in menus, 'Invalid Menu'
+AssertionError: Invalid Menu
+2021-01-19 12:44:25,252 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 64, in help_fns
+    menu_str = core_utils.generate_menu(menu, dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 124, in generate_menu
+    assert menu in menus, 'Invalid Menu'
+AssertionError: Invalid Menu
+2021-01-19 12:44:25,969 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 64, in help_fns
+    menu_str = core_utils.generate_menu(menu, dbi, user_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 124, in generate_menu
+    assert menu in menus, 'Invalid Menu'
+AssertionError: Invalid Menu
+2021-01-19 12:44:30,690 - apscheduler.scheduler -                     INFO - Removed job 2dca6eb9edce4a98b669c5c3ef088f4f
+2021-01-19 12:45:17,140 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:45:27,219 - apscheduler.scheduler -                     INFO - Removed job 422eb433e68c473e8b4a07f357386636
+2021-01-19 12:45:27,572 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-19 12:47:43,857 - apscheduler.scheduler -                     INFO - Removed job 7b4fe16d998a469495154c856a6d8ebf
+2021-01-19 12:47:43,857 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-19 12:47:43 UTC], next run at: 2021-01-19 12:47:43 UTC)" (scheduled at 2021-01-19 12:47:43.856271+00:00)
+2021-01-19 12:47:44,219 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-19 12:47:43 UTC], next run at: 2021-01-19 12:47:43 UTC)" executed successfully
+2021-01-19 12:55:27,573 - apscheduler.scheduler -                     INFO - Removed job 87ed1a2f89b643048e804b5981931544
+2021-01-19 12:55:27,574 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-19 12:55:27 UTC], next run at: 2021-01-19 12:55:27 UTC)" (scheduled at 2021-01-19 12:55:27.571210+00:00)
+2021-01-19 12:55:28,263 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-19 12:55:27 UTC], next run at: 2021-01-19 12:55:27 UTC)" executed successfully
+2021-01-19 15:20:19,342 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-19 15:20:19,343 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-19 15:20:19,343 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-19 15:33:08,482 - apscheduler.scheduler -                     INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-01-19 15:33:08,484 - apscheduler.scheduler -                     INFO - Added job "remind_events" to job store "default"
+2021-01-19 15:33:08,484 - apscheduler.scheduler -                     INFO - Scheduler started
+2021-01-20 00:00:00,002 - apscheduler.executors.default -                     INFO - Running job "remind_events (trigger: cron[day_of_week='0,1,2,3,4,5,6', hour='8', minute='0', second='0'], next run at: 2021-01-20 08:00:00 +08)" (scheduled at 2021-01-20 08:00:00+08:00)
+2021-01-20 00:00:00,736 - apscheduler.executors.default -                     INFO - Job "remind_events (trigger: cron[day_of_week='0,1,2,3,4,5,6', hour='8', minute='0', second='0'], next run at: 2021-01-21 08:00:00 +08)" executed successfully
+2021-01-20 01:34:07,860 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:34:19,864 - apscheduler.scheduler -                     INFO - Removed job 8f7259e854234120bc0527d5fdec22db
+2021-01-20 01:34:20,232 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:34:28,775 - apscheduler.scheduler -                     INFO - Removed job 1cf5e8f957ee4ed8807226ecd385cae4
+2021-01-20 01:34:29,124 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:34:39,851 - apscheduler.scheduler -                     INFO - Removed job 915bd34777f349da8095c642e3772b2c
+2021-01-20 01:34:40,567 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:05,089 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:11,494 - apscheduler.scheduler -                     INFO - Removed job 9e8879b8d7024343b692b34ad2288aac
+2021-01-20 01:38:11,839 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:15,488 - apscheduler.scheduler -                     INFO - Removed job c2f6ba0e30cb4d38bae281f3d1d55c89
+2021-01-20 01:38:15,834 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:18,867 - apscheduler.scheduler -                     INFO - Removed job af6aad3a0baa4a75b02d6e5079c785f1
+2021-01-20 01:38:19,268 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:25,933 - apscheduler.scheduler -                     INFO - Removed job 6c20d9396adb45b187995631f931efb8
+2021-01-20 01:38:26,399 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:30,642 - apscheduler.scheduler -                     INFO - Removed job 219ab749ca154ce7b51880c287289d09
+2021-01-20 01:38:30,986 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:42,690 - apscheduler.scheduler -                     INFO - Removed job b8130931d1c14e888c8c97ee760beeee
+2021-01-20 01:38:43,400 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:38:56,653 - apscheduler.scheduler -                     INFO - Removed job adca244967f643e7976722cc93f4dd42
+2021-01-20 01:38:57,798 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:44:01,557 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:44:02,765 - apscheduler.scheduler -                     INFO - Removed job 83011e3b71bd46a98a768a40385708a2
+2021-01-20 01:44:03,128 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:44:24,782 - apscheduler.scheduler -                     INFO - Removed job 6f3e5250388443a9ae7bded551cea9b4
+2021-01-20 01:44:25,635 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:44:40,567 - apscheduler.scheduler -                     INFO - Removed job e1654dd1cfac47698ab97098db8c30e6
+2021-01-20 01:44:40,568 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-20 01:44:40 UTC], next run at: 2021-01-20 01:44:40 UTC)" (scheduled at 2021-01-20 01:44:40.566776+00:00)
+2021-01-20 01:44:40,927 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-20 01:44:40 UTC], next run at: 2021-01-20 01:44:40 UTC)" executed successfully
+2021-01-20 01:45:40,626 - apscheduler.scheduler -                     INFO - Removed job a1d4e77f540d46208244d15e0c12e857
+2021-01-20 01:45:41,496 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:46:04,894 - apscheduler.scheduler -                     INFO - Removed job 07a233967e0c4298a5391f4f83b614ad
+2021-01-20 01:46:04,895 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 279, in ch_perm
+    uid, perm_id = args[0], args[1]
+IndexError: list index out of range
+2021-01-20 01:46:18,296 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:46:31,007 - apscheduler.scheduler -                     INFO - Removed job 5978aed0b582443eb27877835951e73b
+2021-01-20 01:46:31,472 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:46:41,451 - apscheduler.scheduler -                     INFO - Removed job 6f38f8162bfe4b47a446edcfa333f812
+2021-01-20 01:46:42,057 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 01:48:57,798 - apscheduler.scheduler -                     INFO - Removed job 0953d9c198a24538b641d798ed4e60c7
+2021-01-20 01:48:57,799 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-20 01:48:57 UTC], next run at: 2021-01-20 01:48:57 UTC)" (scheduled at 2021-01-20 01:48:57.797617+00:00)
+2021-01-20 01:48:58,217 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-20 01:48:57 UTC], next run at: 2021-01-20 01:48:57 UTC)" executed successfully
+2021-01-20 01:56:42,058 - apscheduler.scheduler -                     INFO - Removed job dcab05a5aa9a4d9b80f143ccaaf34587
+2021-01-20 01:56:42,059 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-20 01:56:42 UTC], next run at: 2021-01-20 01:56:42 UTC)" (scheduled at 2021-01-20 01:56:42.056386+00:00)
+2021-01-20 01:56:42,444 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-20 01:56:42 UTC], next run at: 2021-01-20 01:56:42 UTC)" executed successfully
+2021-01-20 02:01:24,510 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 02:01:29,271 - apscheduler.scheduler -                     INFO - Removed job 4e160a817710464da81163f06f9a2c86
+2021-01-20 02:01:29,655 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 02:01:32,344 - apscheduler.scheduler -                     INFO - Removed job 7187e94a38414947a4fc4c76454f0f3d
+2021-01-20 02:01:32,726 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 02:01:34,712 - apscheduler.scheduler -                     INFO - Removed job 5c715b1333f846e9888beeed05208951
+2021-01-20 02:01:35,087 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 02:01:45,968 - apscheduler.scheduler -                     INFO - Removed job 3418c44a178446c7a2a202ea41b67977
+2021-01-20 02:01:46,358 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 02:01:49,857 - apscheduler.scheduler -                     INFO - Removed job 8484426ac5ea4468bd8fb285497d728c
+2021-01-20 02:01:50,212 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 02:01:55,997 - apscheduler.scheduler -                     INFO - Removed job a7f689717995468ab2ec18bab7959cf1
+2021-01-20 02:01:56,717 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 02:02:00,611 - apscheduler.scheduler -                     INFO - Removed job 8c469c83b33246969bbb19f32ef1dd6b
+2021-01-20 02:02:01,918 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 181, in tc_next
+    return t_complete(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 126, in t_complete
+    msg = core_utils.post_thread(update, context, content, chat_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 399, in post_thread
+    msg = fn(chat_id, content, parse_mode='MarkdownV2')
+  File "<decorator-gen-2>", line 2, in send_message
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 382, in send_message
+    return self._message('sendMessage', data,  # type: ignore[return-value]
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: can't find end of bold entity at byte offset 124
+2021-01-20 13:35:52,147 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:36:17,714 - apscheduler.scheduler -                     INFO - Removed job 0f4a80065450430c9888a9e50a129a5b
+2021-01-20 13:36:18,074 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:36:24,161 - apscheduler.scheduler -                     INFO - Removed job 64b62cfb69364d18ba842a51faf90818
+2021-01-20 13:36:24,605 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:36:29,998 - apscheduler.scheduler -                     INFO - Removed job 1e2199fb570a4aef8914f186210ba2d6
+2021-01-20 13:36:30,371 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:36:40,135 - apscheduler.scheduler -                     INFO - Removed job b9a792af87454a4c90ba31b9f0b050a7
+2021-01-20 13:36:40,545 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:36:47,510 - apscheduler.scheduler -                     INFO - Removed job 7a4aeefa10404b20ba964057c9c6fdc9
+2021-01-20 13:36:47,894 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:36:57,953 - apscheduler.scheduler -                     INFO - Removed job f7ada92180c44ed7b76446891b89ae8d
+2021-01-20 13:36:58,668 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:37:11,470 - apscheduler.scheduler -                     INFO - Removed job 202348f6b5f04bf986035c3f337a2e75
+2021-01-20 13:37:12,816 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 13:37:22,222 - apscheduler.scheduler -                     INFO - Removed job 4edd39eb75634695b26c77032567a705
+2021-01-20 14:12:11,848 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:12:13,880 - apscheduler.scheduler -                     INFO - Removed job 6f48105e1fe74b898ca3982f3b556bae
+2021-01-20 14:12:14,232 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:12:25,317 - apscheduler.scheduler -                     INFO - Removed job 91bd47ba840a4a4fb10a1a2d82b769aa
+2021-01-20 14:12:25,695 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:12:31,793 - apscheduler.scheduler -                     INFO - Removed job db9ca1a1c02a4395b68775bc640f06f7
+2021-01-20 14:12:32,160 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:16:49,226 - apscheduler.scheduler -                     INFO - Removed job 01cb0c7248a74fa78d03afa218f7044e
+2021-01-20 14:16:49,602 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:16:55,987 - apscheduler.scheduler -                     INFO - Removed job a3fbc1b69b644fdea4b69e9c25b27815
+2021-01-20 14:16:56,345 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:17:02,130 - apscheduler.scheduler -                     INFO - Removed job e4a860a540d0499393879cee2945f264
+2021-01-20 14:17:02,860 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:17:11,958 - apscheduler.scheduler -                     INFO - Removed job 6fbd1a8894aa48e084a519465de8bb8a
+2021-01-20 14:17:12,604 - telegram.ext.dispatcher -                     ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 425, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/conversationhandler.py", line 487, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/ext/handler.py", line 145, in handle_update
+    return self.callback(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 181, in tc_next
+    return t_complete(update, context)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/core.py", line 126, in t_complete
+    msg = core_utils.post_thread(update, context, content, chat_id)
+  File "/home/Hosea/dev/telegram_projects/leobot-git/utils/core_utils.py", line 399, in post_thread
+    msg = fn(chat_id, content, parse_mode='MarkdownV2')
+  File "<decorator-gen-2>", line 2, in send_message
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 78, in decorator
+    result = func(*args, **kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 382, in send_message
+    return self._message('sendMessage', data,  # type: ignore[return-value]
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 215, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/bot.py", line 184, in _post
+    return self.request.post('{}/{}'.format(self.base_url, endpoint), data=data,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 325, in post
+    result = self._request_wrapper('POST', url,
+  File "/home/Hosea/.virtualenvs/leobot/lib/python3.8/site-packages/telegram/utils/request.py", line 250, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Can't parse entities: character '#' is reserved and must be escaped with the preceding '\'
+2021-01-20 14:19:59,265 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:20:02,457 - apscheduler.scheduler -                     INFO - Removed job 889693ffc2cd4f0db12d01ae0eb258a6
+2021-01-20 14:20:02,866 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:20:15,797 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:20:49,766 - apscheduler.scheduler -                     INFO - Removed job 2b20f1b89f03415ba58ac8112f95fb3d
+2021-01-20 14:20:50,135 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:21:04,206 - apscheduler.scheduler -                     INFO - Removed job eb22b2029e69414e90a32d92d8acbd68
+2021-01-20 14:21:04,207 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:21:09,121 - apscheduler.scheduler -                     INFO - Removed job 077bb315126e483690e12e8901c906b3
+2021-01-20 14:21:18,155 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:21:21,407 - apscheduler.scheduler -                     INFO - Removed job 4adf86c4100b474aa0c5e189f93ff059
+2021-01-20 14:21:21,782 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:21:23,636 - apscheduler.scheduler -                     INFO - Removed job 218109a894ee4dd6b2ddb600e0600564
+2021-01-20 14:21:23,639 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:21:50,284 - apscheduler.scheduler -                     INFO - Removed job 3a28bf2ba7ae4a32ba482ce90831829f
+2021-01-20 14:24:08,580 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:24:11,291 - apscheduler.scheduler -                     INFO - Removed job 2ce5123b7e3f46e99713ae1004a7261a
+2021-01-20 14:26:30,203 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:26:34,140 - apscheduler.scheduler -                     INFO - Removed job f5edb488af344021adf4753f255b0ec3
+2021-01-20 14:26:34,499 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:26:41,513 - apscheduler.scheduler -                     INFO - Removed job 8c53d0305ea047eeb307b0579d675e84
+2021-01-20 14:26:41,872 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:26:44,585 - apscheduler.scheduler -                     INFO - Removed job 22ec17f9915e4b28bb971c397a9162ea
+2021-01-20 14:26:44,946 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:26:48,579 - apscheduler.scheduler -                     INFO - Removed job 6f95ea9ea1814f7e9c331023bc428fe2
+2021-01-20 14:26:48,959 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:26:51,959 - apscheduler.scheduler -                     INFO - Removed job b5842ca5006b4404bc0032eaacd7f2e2
+2021-01-20 14:26:52,353 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:26:57,795 - apscheduler.scheduler -                     INFO - Removed job af5b986eaf274b49996fe937c578089f
+2021-01-20 14:26:58,524 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:27:01,788 - apscheduler.scheduler -                     INFO - Removed job e076836c8f7a4273a7446bf6459cabe5
+2021-01-20 14:27:03,200 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:27:06,090 - apscheduler.scheduler -                     INFO - Removed job 76c8487250c64b34a710f18deea02aa8
+2021-01-20 14:30:13,484 - apscheduler.scheduler -                     INFO - Removed job cbcd10a5c9584afaa6b1d6218d28e53d
+2021-01-20 14:30:13,855 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:30:15,880 - apscheduler.scheduler -                     INFO - Removed job 2aa3f0241a744ba89f58cd9107526cf7
+2021-01-20 14:30:16,264 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:30:17,137 - apscheduler.scheduler -                     INFO - Removed job c8f5fdbc6a40468a87828cd2d51e19ee
+2021-01-20 14:30:17,860 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:30:19,193 - apscheduler.scheduler -                     INFO - Removed job d973e839fb3a4089a9b191e2291afc9b
+2021-01-20 14:30:19,656 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:30:24,233 - apscheduler.scheduler -                     INFO - Removed job 27defcd8f58f4223819fc001261a36d6
+2021-01-20 14:30:24,632 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:30:26,619 - apscheduler.scheduler -                     INFO - Removed job 9baee4d304934334aaa5ec4d418d18ee
+2021-01-20 14:30:27,143 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:30:40,212 - apscheduler.scheduler -                     INFO - Removed job 4b65c0394f984667a67eb47b4cd43171
+2021-01-20 14:30:40,958 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:30:47,273 - apscheduler.scheduler -                     INFO - Removed job a54bf86f600d4dd78f41e33b9f6b1cf3
+2021-01-20 14:30:48,505 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 14:40:48,504 - apscheduler.scheduler -                     INFO - Removed job f7df638b6f2442598719f4fa737d4e23
+2021-01-20 14:40:48,505 - apscheduler.executors.default -                     INFO - Running job "_trigger_timeout (trigger: date[2021-01-20 14:40:48 UTC], next run at: 2021-01-20 14:40:48 UTC)" (scheduled at 2021-01-20 14:40:48.504000+00:00)
+2021-01-20 14:40:48,896 - apscheduler.executors.default -                     INFO - Job "_trigger_timeout (trigger: date[2021-01-20 14:40:48 UTC], next run at: 2021-01-20 14:40:48 UTC)" executed successfully
+2021-01-20 15:10:08,239 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 15:10:09,849 - apscheduler.scheduler -                     INFO - Removed job 22354e27011048a0b4ca856ad12179ef
+2021-01-20 15:10:10,212 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 15:10:12,240 - apscheduler.scheduler -                     INFO - Removed job d2d8b5e9d3054c5fae6fc9411ae47caf
+2021-01-20 15:10:12,599 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 15:10:15,195 - apscheduler.scheduler -                     INFO - Removed job 55644e1cc2e24355922840493ea178a5
+2021-01-20 15:10:15,548 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 15:10:19,499 - apscheduler.scheduler -                     INFO - Removed job c9bdd9bf3c194e10953eff0ae513eeb9
+2021-01-20 15:10:19,858 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 15:10:21,543 - apscheduler.scheduler -                     INFO - Removed job 18a1c2b49c924a679480a51c570165e3
+2021-01-20 15:10:21,901 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 15:10:25,947 - apscheduler.scheduler -                     INFO - Removed job 556c37d03a5a43d08c5881c82cbd0165
+2021-01-20 15:10:26,705 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"
+2021-01-20 15:10:35,163 - apscheduler.scheduler -                     INFO - Removed job 3b44cce193d641fb8f7ab7931676a618
+2021-01-20 15:10:36,374 - apscheduler.scheduler -                     INFO - Added job "_trigger_timeout" to job store "default"

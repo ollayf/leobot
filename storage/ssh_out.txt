@@ -1,15 +1,386 @@
 nohup: ignoring input
-/home/Hosea/.virtualenvs/leobot/bin/python: Error while finding module specification for 'virtualenvwrapper.hook_loader' (ModuleNotFoundError: No module named 'virtualenvwrapper')
+/home/Hosea/.local/bin/virtualenvwrapper.sh: line 230: : command not found
 virtualenvwrapper.sh: There was a problem running the initialization hooks.
 
 If Python could not import the module virtualenvwrapper.hook_loader,
 check that virtualenvwrapper has been installed for
-VIRTUALENVWRAPPER_PYTHON=/home/Hosea/.virtualenvs/leobot/bin/python and that PATH is
+VIRTUALENVWRAPPER_PYTHON= and that PATH is
 set properly.
-/home/Hosea/.virtualenvs/leobot/bin/python: Error while finding module specification for 'virtualenvwrapper.hook_loader' (ModuleNotFoundError: No module named 'virtualenvwrapper')
-/home/Hosea/.virtualenvs/leobot/bin/python: Error while finding module specification for 'virtualenvwrapper.hook_loader' (ModuleNotFoundError: No module named 'virtualenvwrapper')
+/home/Hosea/.local/bin/virtualenvwrapper.sh: line 230: : command not found
+/home/Hosea/.local/bin/virtualenvwrapper.sh: line 230: : command not found
 initialising
 Testing value: None
 {'user': 'root', 'password': 'Charm1523_', 'host': 'localhost', 'raise_on_warnings': True, 'database': 'leobot'}
 Connected to leobot
-Message Return {'message_id': 366, 'date': 1610972670, 'chat': {'id': 333647246, 'type': 'private', 'username': 'ollayf', 'first_name': 'Hosea'}, 'text': 'Energise!', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1238544455, 'first_name': 'Leonardo', 'is_bot': True, 'username': 'hopeintercessionbot'}}
+Message Return {'message_id': 593, 'date': 1611070388, 'chat': {'id': 333647246, 'type': 'private', 'username': 'ollayf', 'first_name': 'Hosea'}, 'text': 'Energise!', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1238544455, 'first_name': 'Leonardo', 'is_bot': True, 'username': 'hopeintercessionbot'}}
+
+        SELECT username FROM users
+        WHERE user_id = 81333230
+        
+Connected to leobot
+res None
+
+        INSERT INTO users (user_id, permissions_id, 
+        username, firstname, lastname)
+        VALUES (81333230, 1, 
+        'NeriahK', 'Neriah', 'Krissie')
+        
+here
+error found
+
+        SELECT username FROM users
+        WHERE user_id = 337366961
+        
+res ('sylviacxt',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+current tag {1: 'potato', 2: 'scrabble', 3: '#prophecy', 4: '#lostart', 5: 'beans', 6: None}
+final tgas ['potato']
+content, __39: xintian__
+*Testimony*
+
+xintian is naise
+
+*\#potato*
+
+CONTENT: __39: xintian__
+*Testimony*
+
+xintian is naise
+
+*\#potato*
+
+{'new_thread': True, 'title': 'xintian', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'xintian is naise', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff802ebb50>}
+{'message_id': 14, 'date': 1611106737, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '39: xintian\nTestimony\n\nxintian is naise\n\n#potato', 'entities': [{'type': 'underline', 'offset': 0, 'length': 11}, {'type': 'bold', 'offset': 12, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 7}, {'type': 'bold', 'offset': 41, 'length': 7}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+MESSAGE TYPE <class 'telegram.message.Message'>
+CAT ID: 
+        SELECT id 
+        FROM categories 
+        WHERE name = 'Testimony'
+        AND tag = 0;
+        
+<class 'datetime.datetime'> 2021-01-20 01:38:57+00:00
+
+        UPDATE threads SET 
+            msg_id = 14,
+            parent_id = NULL,
+            category_id = 2,
+            msg = 'xintian is naise',
+            likes = 0,
+            post_dt = '2021-01-20 01:38:57',
+            title = 'xintian',
+            author_id = 7,
+            file_id = NULL
+        WHERE id = 39
+        
+Logged thread
+{'message_id': 14, 'date': 1611106737, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '39: xintian\nTestimony\n\nxintian is naise\n\n#potato', 'entities': [{'type': 'underline', 'offset': 0, 'length': 11}, {'type': 'bold', 'offset': 12, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 7}, {'type': 'bold', 'offset': 41, 'length': 7}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+
+        SELECT username FROM users
+        WHERE user_id = 333647246
+        
+res ('ollayf',)
+in admin menu
+checking permissions
+getting usert perms
+getting fn perms
+
+        SELECT permissions.name, permissions.id
+        FROM functions 
+        LEFT JOIN permissions
+        ON functions.permissions_id = permissions.id
+        WHERE functions.name = 'admin_menu'
+        
+replying
+B4
+Trying
+Yeet
+All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'member'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'member'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'member')]
+All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
+Value: NeriahK
+User 8
+All permissions ['member', 'mod', 'admin', 'dev']
+Perms 3
+Sender id: 333647246
+got here
+A POWER 100
+R POWER 0
+got here
+A POWER 100
+R POWER 10
+Username, Old perm
+NeriahK member
+User NeriahK permissions changed from member to admin!
+B4
+Trying
+Yeet
+All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'member'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'member'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'admin')]
+All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
+Value: eleoraevelynnnn
+User 4
+All permissions ['member', 'mod', 'admin', 'dev']
+Perms 3
+Sender id: 333647246
+got here
+A POWER 100
+R POWER 0
+got here
+A POWER 100
+R POWER 10
+Username, Old perm
+eleoraevelynnnn member
+User eleoraevelynnnn permissions changed from member to admin!
+B4
+Trying
+Yeet
+All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'admin'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'member'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'admin')]
+All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
+Value: faithohhhhh
+User 6
+All permissions ['member', 'mod', 'admin', 'dev']
+Perms 3
+Sender id: 333647246
+got here
+A POWER 100
+R POWER 0
+got here
+A POWER 100
+R POWER 10
+Username, Old perm
+faithohhhhh member
+User faithohhhhh permissions changed from member to admin!
+B4
+Trying
+Yeet
+All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'admin'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'admin'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'admin')]
+All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
+Value: sylviacxt
+User 7
+All permissions ['member', 'mod', 'admin', 'dev']
+Perms 3
+Sender id: 333647246
+got here
+A POWER 100
+R POWER 0
+got here
+A POWER 100
+R POWER 10
+Username, Old perm
+sylviacxt member
+User sylviacxt permissions changed from member to admin!
+B4
+Trying
+Yeet
+All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'admin'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'admin'), (7, 'sylviacxt', 337366961, 'admin'), (8, 'NeriahK', 81333230, 'admin')]
+All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
+Value: lucasfantastic
+User 5
+All permissions ['member', 'mod', 'admin', 'dev']
+Perms 3
+Sender id: 333647246
+got here
+A POWER 100
+R POWER 0
+got here
+A POWER 100
+R POWER 10
+Username, Old perm
+lucasfantastic member
+User lucasfantastic permissions changed from member to admin!
+
+        SELECT username FROM users
+        WHERE user_id = 337366961
+        
+res ('sylviacxt',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+current tag {1: 'beans', 2: 'potato', 3: 'scrabble', 4: 'another_egg', 5: 'Tag1', 6: None}
+Embarrassing_Lmao
+final tgas ['Embarrassing_Lmao']
+content, __40: dayum__
+*Testimony*
+
+i didnt know my threads all got posted HAHHAAHAHAHAHAH i am now embarrassed
+
+*\#Embarrassing_Lmao*
+
+CONTENT: __40: dayum__
+*Testimony*
+
+i didnt know my threads all got posted HAHHAAHAHAHAHAH i am now embarrassed
+
+*\#Embarrassing_Lmao*
+
+{'new_thread': True, 'title': 'dayum', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'i didnt know my threads all got posted HAHHAAHAHAHAHAH i am now embarrassed', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff82331940>}
+
+        SELECT username FROM users
+        WHERE user_id = 204983959
+        
+Connected to leobot
+res ('eleoraevelynnnn',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+current tag {1: 'beans', 2: 'scrabble', 3: '#lostart', 4: 'potato', 5: 'egg', 6: None}
+jesusisdabest
+final tgas ['jesusisdabest']
+content, __41: Jesus loves you__
+*Testimony*
+
+John3:16
+
+*\#jesusisdabest*
+
+CONTENT: __41: Jesus loves you__
+*Testimony*
+
+John3:16
+
+*\#jesusisdabest*
+
+{'new_thread': True, 'title': 'Jesus loves you', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'John3:16', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff802f5bb0>}
+{'message_id': 15, 'date': 1611149832, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '41: Jesus loves you\nTestimony\n\nJohn3:16\n\n#jesusisdabest', 'entities': [{'type': 'underline', 'offset': 0, 'length': 19}, {'type': 'bold', 'offset': 20, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 14}, {'type': 'bold', 'offset': 41, 'length': 14}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+MESSAGE TYPE <class 'telegram.message.Message'>
+CAT ID: 
+        SELECT id 
+        FROM categories 
+        WHERE name = 'Testimony'
+        AND tag = 0;
+        
+<class 'datetime.datetime'> 2021-01-20 13:37:12+00:00
+
+        UPDATE threads SET 
+            msg_id = 15,
+            parent_id = NULL,
+            category_id = 2,
+            msg = 'John3:16',
+            likes = 0,
+            post_dt = '2021-01-20 13:37:12',
+            title = 'Jesus loves you',
+            author_id = 4,
+            file_id = NULL
+        WHERE id = 41
+        
+Logged thread
+{'message_id': 15, 'date': 1611149832, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '41: Jesus loves you\nTestimony\n\nJohn3:16\n\n#jesusisdabest', 'entities': [{'type': 'underline', 'offset': 0, 'length': 19}, {'type': 'bold', 'offset': 20, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 14}, {'type': 'bold', 'offset': 41, 'length': 14}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+current tag {1: '#prophecy', 2: 'potato', 3: 'egg', 4: '#lostart', 5: 'beans', 6: None}
+final tgas ['#prophecy']
+content, __42: Nobody Ever Told Me__
+*Testimony*
+
+Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
+— Jack Deere, Surprised By The Voice of God
+
+*\##prophecy*
+
+CONTENT: __42: Nobody Ever Told Me__
+*Testimony*
+
+Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
+— Jack Deere, Surprised By The Voice of God
+
+*\##prophecy*
+
+{'new_thread': True, 'title': 'Nobody Ever Told Me', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him\n— Jack Deere, Surprised By The Voice of God', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff8029e280>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+in admin menu
+checking permissions
+getting usert perms
+getting fn perms
+
+        SELECT permissions.name, permissions.id
+        FROM functions 
+        LEFT JOIN permissions
+        ON functions.permissions_id = permissions.id
+        WHERE functions.name = 'admin_menu'
+        
+replying
+
+        SELECT username FROM users
+        WHERE user_id = 333647246
+        
+res ('ollayf',)
+ISSUES: [(1, 'Potato'), (3, 'Title'), (4, 'Cars 2')]
+CONTENT: **1**: __Potato__
+**3**: __Title__
+**4**: __Cars 2__
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+in admin menu
+checking permissions
+getting usert perms
+getting fn perms
+
+        SELECT permissions.name, permissions.id
+        FROM functions 
+        LEFT JOIN permissions
+        ON functions.permissions_id = permissions.id
+        WHERE functions.name = 'admin_menu'
+        
+replying
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+current tag {1: '#prophecy', 2: 'potato', 3: 'egg', 4: '#lostart', 5: 'beans', 6: None}
+Prophecy
+final tgas ['Prophecy']
+content, __43: Nobody Ever Told Me__
+*Testimony*
+
+Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
+— Jack Deere, Surprised By The Voice of God
+
+*\#Prophecy*
+
+CONTENT: __43: Nobody Ever Told Me__
+*Testimony*
+
+Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
+— Jack Deere, Surprised By The Voice of God
+
+*\#Prophecy*
+
+{'new_thread': True, 'title': 'Nobody Ever Told Me', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him\n— Jack Deere, Surprised By The Voice of God', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff802f0280>}
+{'message_id': 17, 'date': 1611152822, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '43: Nobody Ever Told Me\nTestimony\n\nDid God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him\n— Jack Deere, Surprised By The Voice of God\n\n#Prophecy', 'entities': [{'type': 'underline', 'offset': 0, 'length': 23}, {'type': 'bold', 'offset': 24, 'length': 9}, {'type': 'hashtag', 'offset': 540, 'length': 9}, {'type': 'bold', 'offset': 540, 'length': 9}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
