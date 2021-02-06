@@ -63,6 +63,17 @@ def check_permissions(fn, user_id, dbi):
     else:
         return False
 
+def clean_msg(msg):
+    '''
+    Checks the message for formatting issues that are not ok with telegram tingz
+    '''
+    assert isinstance(msg, string), 'Message input must be a string!'
+    msg = msg.replace('\\', '')
+    msg = msg.replace('!', '\!')
+    msg = msg.replace('*', '')
+    msg = msg.replace('_', '')
+    return msg
+
 def set_user_data_to_default(update, context, default_user_data):
     '''
     Recursively sets user_data['temp'] of this user to default user_data['temp']

@@ -75,6 +75,7 @@ def new_thread(update, context):
 def t_title(update, context):
     # collect previous data
     reply = update.message.text
+    reply = core_utils.clean_msg(reply)
     context.user_data['temp']['title'] = reply
     # write choices
     dbi = context.bot_data['dbi']
@@ -102,6 +103,7 @@ def t_cat(update, context):
 
 def t_body(update, context):
     reply = update.message.text
+    reply = core_utils.clean_msg(reply)
     context.user_data['temp']['body'] = reply
     update.message.reply_text(t_file_msg)
     return FILE
@@ -193,12 +195,14 @@ def fb_init(update, context):
 
 def fb_title(update, context):
     reply = update.message.text
+    reply = core_utils.clean_msg(reply)
     context.user_data['temp']['title'] = reply
     update.message.reply_text(fb_details_msg)
     return BODY
 
 def fb_body(update, context):
     reply = update.message.text
+    reply = core_utils.clean_msg(reply)
     context.user_data['temp']['body'] = reply
     update.message.reply_text(fb_file_msg)
     return FILE

@@ -12,298 +12,376 @@ initialising
 Testing value: None
 {'user': 'root', 'password': 'Charm1523_', 'host': 'localhost', 'raise_on_warnings': True, 'database': 'leobot'}
 Connected to leobot
-Message Return {'message_id': 593, 'date': 1611070388, 'chat': {'id': 333647246, 'type': 'private', 'username': 'ollayf', 'first_name': 'Hosea'}, 'text': 'Energise!', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1238544455, 'first_name': 'Leonardo', 'is_bot': True, 'username': 'hopeintercessionbot'}}
-
-        SELECT username FROM users
-        WHERE user_id = 81333230
-        
-Connected to leobot
-res None
-
-        INSERT INTO users (user_id, permissions_id, 
-        username, firstname, lastname)
-        VALUES (81333230, 1, 
-        'NeriahK', 'Neriah', 'Krissie')
-        
-here
-error found
-
-        SELECT username FROM users
-        WHERE user_id = 337366961
-        
-res ('sylviacxt',)
-here
-None
-getting cats
-creating tc
-getting next elemnt
-AFTER NEXT
-current tag {1: 'potato', 2: 'scrabble', 3: '#prophecy', 4: '#lostart', 5: 'beans', 6: None}
-final tgas ['potato']
-content, __39: xintian__
-*Testimony*
-
-xintian is naise
-
-*\#potato*
-
-CONTENT: __39: xintian__
-*Testimony*
-
-xintian is naise
-
-*\#potato*
-
-{'new_thread': True, 'title': 'xintian', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'xintian is naise', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff802ebb50>}
-{'message_id': 14, 'date': 1611106737, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '39: xintian\nTestimony\n\nxintian is naise\n\n#potato', 'entities': [{'type': 'underline', 'offset': 0, 'length': 11}, {'type': 'bold', 'offset': 12, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 7}, {'type': 'bold', 'offset': 41, 'length': 7}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
-MESSAGE TYPE <class 'telegram.message.Message'>
-CAT ID: 
-        SELECT id 
-        FROM categories 
-        WHERE name = 'Testimony'
-        AND tag = 0;
-        
-<class 'datetime.datetime'> 2021-01-20 01:38:57+00:00
-
-        UPDATE threads SET 
-            msg_id = 14,
-            parent_id = NULL,
-            category_id = 2,
-            msg = 'xintian is naise',
-            likes = 0,
-            post_dt = '2021-01-20 01:38:57',
-            title = 'xintian',
-            author_id = 7,
-            file_id = NULL
-        WHERE id = 39
-        
-Logged thread
-{'message_id': 14, 'date': 1611106737, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '39: xintian\nTestimony\n\nxintian is naise\n\n#potato', 'entities': [{'type': 'underline', 'offset': 0, 'length': 11}, {'type': 'bold', 'offset': 12, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 7}, {'type': 'bold', 'offset': 41, 'length': 7}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
-
-        SELECT username FROM users
-        WHERE user_id = 333647246
-        
-res ('ollayf',)
-in admin menu
-checking permissions
-getting usert perms
-getting fn perms
-
-        SELECT permissions.name, permissions.id
-        FROM functions 
-        LEFT JOIN permissions
-        ON functions.permissions_id = permissions.id
-        WHERE functions.name = 'admin_menu'
-        
-replying
-B4
-Trying
-Yeet
-All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'member'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'member'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'member')]
-All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
-Value: NeriahK
-User 8
-All permissions ['member', 'mod', 'admin', 'dev']
-Perms 3
-Sender id: 333647246
-got here
-A POWER 100
-R POWER 0
-got here
-A POWER 100
-R POWER 10
-Username, Old perm
-NeriahK member
-User NeriahK permissions changed from member to admin!
-B4
-Trying
-Yeet
-All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'member'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'member'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'admin')]
-All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
-Value: eleoraevelynnnn
-User 4
-All permissions ['member', 'mod', 'admin', 'dev']
-Perms 3
-Sender id: 333647246
-got here
-A POWER 100
-R POWER 0
-got here
-A POWER 100
-R POWER 10
-Username, Old perm
-eleoraevelynnnn member
-User eleoraevelynnnn permissions changed from member to admin!
-B4
-Trying
-Yeet
-All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'admin'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'member'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'admin')]
-All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
-Value: faithohhhhh
-User 6
-All permissions ['member', 'mod', 'admin', 'dev']
-Perms 3
-Sender id: 333647246
-got here
-A POWER 100
-R POWER 0
-got here
-A POWER 100
-R POWER 10
-Username, Old perm
-faithohhhhh member
-User faithohhhhh permissions changed from member to admin!
-B4
-Trying
-Yeet
-All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'admin'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'admin'), (7, 'sylviacxt', 337366961, 'member'), (8, 'NeriahK', 81333230, 'admin')]
-All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
-Value: sylviacxt
-User 7
-All permissions ['member', 'mod', 'admin', 'dev']
-Perms 3
-Sender id: 333647246
-got here
-A POWER 100
-R POWER 0
-got here
-A POWER 100
-R POWER 10
-Username, Old perm
-sylviacxt member
-User sylviacxt permissions changed from member to admin!
-B4
-Trying
-Yeet
-All users: [(1, 'ollayf', 333647246, 'dev'), (2, 'cliona', 444719397, 'member'), (3, 'ollayff', 678686611, 'member'), (4, 'eleoraevelynnnn', 204983959, 'admin'), (5, 'lucasfantastic', 133204709, 'member'), (6, 'faithohhhhh', 35302476, 'admin'), (7, 'sylviacxt', 337366961, 'admin'), (8, 'NeriahK', 81333230, 'admin')]
-All usernames ['ollayf', 'cliona', 'ollayff', 'eleoraevelynnnn', 'lucasfantastic', 'faithohhhhh', 'sylviacxt', 'NeriahK']
-Value: lucasfantastic
-User 5
-All permissions ['member', 'mod', 'admin', 'dev']
-Perms 3
-Sender id: 333647246
-got here
-A POWER 100
-R POWER 0
-got here
-A POWER 100
-R POWER 10
-Username, Old perm
-lucasfantastic member
-User lucasfantastic permissions changed from member to admin!
-
-        SELECT username FROM users
-        WHERE user_id = 337366961
-        
-res ('sylviacxt',)
-here
-None
-getting cats
-creating tc
-getting next elemnt
-AFTER NEXT
-current tag {1: 'beans', 2: 'potato', 3: 'scrabble', 4: 'another_egg', 5: 'Tag1', 6: None}
-Embarrassing_Lmao
-final tgas ['Embarrassing_Lmao']
-content, __40: dayum__
-*Testimony*
-
-i didnt know my threads all got posted HAHHAAHAHAHAHAH i am now embarrassed
-
-*\#Embarrassing_Lmao*
-
-CONTENT: __40: dayum__
-*Testimony*
-
-i didnt know my threads all got posted HAHHAAHAHAHAHAH i am now embarrassed
-
-*\#Embarrassing_Lmao*
-
-{'new_thread': True, 'title': 'dayum', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'i didnt know my threads all got posted HAHHAAHAHAHAHAH i am now embarrassed', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff82331940>}
+Message Return {'message_id': 1190, 'date': 1612617702, 'chat': {'id': 333647246, 'type': 'private', 'username': 'ollayf', 'first_name': 'Hosea'}, 'text': 'Energise!', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 1238544455, 'first_name': 'Leonardo', 'is_bot': True, 'username': 'hopeintercessionbot'}}
 
         SELECT username FROM users
         WHERE user_id = 204983959
         
 Connected to leobot
 res ('eleoraevelynnnn',)
+
+        SELECT username FROM users
+        WHERE user_id = 204983959
+        
+res ('eleoraevelynnnn',)
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
 here
 None
 getting cats
 creating tc
 getting next elemnt
 AFTER NEXT
-current tag {1: 'beans', 2: 'scrabble', 3: '#lostart', 4: 'potato', 5: 'egg', 6: None}
-jesusisdabest
-final tgas ['jesusisdabest']
-content, __41: Jesus loves you__
-*Testimony*
+current tag {1: 'Prophecy', 2: None}
+Quickread
+final tgas ['Quickread']
+content, __11: The Fat Kid__
+*Excerpt*
 
-John3:16
+There is a fat kid in school. Every day he woke up, looked at himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and angry. really really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. That kid was curious as to why nobody wanted to make friends with the fat kid, so he walked up to him and asked, "why don't you have friends?" The fat kid replied, "because I'm fat and everyone is not." then the new kid laughed it off as a joke and said, "what? you're not fat!" Turns out, his mirror was distorted and it made him look fat. And because it made him look fat, he thought he was fat. (I always wondered why he only looked at 1 mirror in his entire life, or never asked his parents why)
 
-*\#jesusisdabest*
+Point being: sometimes we value ourselves based on the image of ourselves. For sure, we are created in the image of God. And this adage works both ways too—regardless of our funky or quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror is provided by God himself. One look and you'll know that you are perfect. Not because you are, but because you are God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we were perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
 
-CONTENT: __41: Jesus loves you__
-*Testimony*
+*\#Quickread*
 
-John3:16
+CONTENT: __11: The Fat Kid__
+*Excerpt*
 
-*\#jesusisdabest*
+There is a fat kid in school. Every day he woke up, looked at himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and angry. really really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. That kid was curious as to why nobody wanted to make friends with the fat kid, so he walked up to him and asked, "why don't you have friends?" The fat kid replied, "because I'm fat and everyone is not." then the new kid laughed it off as a joke and said, "what? you're not fat!" Turns out, his mirror was distorted and it made him look fat. And because it made him look fat, he thought he was fat. (I always wondered why he only looked at 1 mirror in his entire life, or never asked his parents why)
 
-{'new_thread': True, 'title': 'Jesus loves you', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'John3:16', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff802f5bb0>}
-{'message_id': 15, 'date': 1611149832, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '41: Jesus loves you\nTestimony\n\nJohn3:16\n\n#jesusisdabest', 'entities': [{'type': 'underline', 'offset': 0, 'length': 19}, {'type': 'bold', 'offset': 20, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 14}, {'type': 'bold', 'offset': 41, 'length': 14}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+Point being: sometimes we value ourselves based on the image of ourselves. For sure, we are created in the image of God. And this adage works both ways too—regardless of our funky or quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror is provided by God himself. One look and you'll know that you are perfect. Not because you are, but because you are God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we were perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
+
+*\#Quickread*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There is a fat kid in school. Every day he woke up, looked at himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and angry. really really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. That kid was curious as to why nobody wanted to make friends with the fat kid, so he walked up to him and asked, "why don\'t you have friends?" The fat kid replied, "because I\'m fat and everyone is not." then the new kid laughed it off as a joke and said, "what? you\'re not fat!" Turns out, his mirror was distorted and it made him look fat. And because it made him look fat, he thought he was fat. (I always wondered why he only looked at 1 mirror in his entire life, or never asked his parents why)\n\nPoint being: sometimes we value ourselves based on the image of ourselves. For sure, we are created in the image of God. And this adage works both ways too—regardless of our funky or quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror is provided by God himself. One look and you\'ll know that you are perfect. Not because you are, but because you are God\'s child. God didn\'t make us perfect because He couldn\'t. Quite the contrary! He could, yet he couldn\'t. If we were perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that\'s who we are.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb5adcac0>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __12: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school. Every day he woke up, he looked himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and angry. Really really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. That kid was curious as to why nobody wanted to make friends with the fat kid, so he walked up to him and asked, "why don't you have friends?" The fat kid replied, "because I'm fat and everyone is not." The new kid laughed it off as a joke and said, "what? You're not fat!" Turns out, his mirror was distorted and it made him look fat. And because it made him look fat, he thought he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Point: sometimes we value ourselves based on our self-image. For sure, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
+
+*\#Quickread*
+
+CONTENT: __12: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school. Every day he woke up, he looked himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and angry. Really really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. That kid was curious as to why nobody wanted to make friends with the fat kid, so he walked up to him and asked, "why don't you have friends?" The fat kid replied, "because I'm fat and everyone is not." The new kid laughed it off as a joke and said, "what? You're not fat!" Turns out, his mirror was distorted and it made him look fat. And because it made him look fat, he thought he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Point: sometimes we value ourselves based on our self-image. For sure, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
+
+*\#Quickread*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school. Every day he woke up, he looked himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and angry. Really really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. That kid was curious as to why nobody wanted to make friends with the fat kid, so he walked up to him and asked, "why don\'t you have friends?" The fat kid replied, "because I\'m fat and everyone is not." The new kid laughed it off as a joke and said, "what? You\'re not fat!" Turns out, his mirror was distorted and it made him look fat. And because it made him look fat, he thought he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nPoint: sometimes we value ourselves based on our self-image. For sure, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you are, but because you’re God\'s child. God didn\'t make us perfect because He couldn\'t. Quite the contrary! He could, yet he couldn\'t. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that\'s who we are.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb5adc2e0>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __13: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school. Every day he woke up, he looked himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. New kid was curious as to why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!" Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Point: sometimes we value ourselves based on our self-image. For sure, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
+
+*\#Quickread*
+
+CONTENT: __13: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school. Every day he woke up, he looked himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. New kid was curious as to why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!" Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Point: sometimes we value ourselves based on our self-image. For sure, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
+
+*\#Quickread*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school. Every day he woke up, he looked himself in the mirror and saw that he was fat. He was ashamed of how he looked. He saw that other people were not fat, and he got really disappointed—and really angry. People started to laugh at him, whispered nasty things behind him, and everyone stopped being his friend. He was bullied for a few months straight until something happened: a kid transferred to his school. New kid was curious as to why nobody was friends with the fat kid, so he walked up to him and asked,\n"Why don\'t you have friends?"\n“Because I\'m fat and everyone is not," the fat kid replied. \nThe new kid laughed it off as a joke and said, "what? You\'re not fat!" Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nPoint: sometimes we value ourselves based on our self-image. For sure, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, all we have to do is to look at the right mirror, not the one at your house, or the one that looks the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you are, but because you’re God\'s child. God didn\'t make us perfect because He couldn\'t. Quite the contrary! He could, yet he couldn\'t. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that\'s who we are.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb5addfd0>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+current tag {1: 'Prophecy', 2: 'Quickread', 3: None}
+Short
+final tgas ['Short']
+content, __14: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
+
+*\#Short*
+
+CONTENT: __14: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! He could, yet he couldn't. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that's who we are.
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\n"Why don\'t you have friends?"\n“Because I\'m fat and everyone is not," the fat kid replied. \nThe new kid laughed it off as a joke and said, "what? You\'re not fat!"\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nSometimes we value ourselves based on our self-image. Yes, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you are, but because you’re God\'s child. God didn\'t make us perfect because He couldn\'t. Quite the contrary! He could, yet he couldn\'t. If we’re perfect, why is there a need for God? Neither does God need our love. But we are made complete in Christ and that\'s who we are.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb4200f40>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __15: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! We are made complete in Christ and that's who we are.
+
+*\#Short*
+
+CONTENT: __15: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! We are made complete in Christ and that's who we are.
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\n"Why don\'t you have friends?"\n“Because I\'m fat and everyone is not," the fat kid replied. \nThe new kid laughed it off as a joke and said, "what? You\'re not fat!"\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nSometimes we value ourselves based on our self-image. Yes, we are created in the image of God. And this adage works both ways too—regardless of how quirky we look! Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by some strange chance, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you are, but because you’re God\'s child. God didn\'t make us perfect because He couldn\'t. Quite the contrary! We are made complete in Christ and that\'s who we are.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb420a250>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __16: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! We are made complete in Christ and that's who we are.
+
+*\#Short*
+
+CONTENT: __16: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! We are made complete in Christ and that's who we are.
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\n"Why don\'t you have friends?"\n“Because I\'m fat and everyone is not," the fat kid replied. \nThe new kid laughed it off as a joke and said, "what? You\'re not fat!"\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nSometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you are, but because you’re God\'s child. God didn\'t make us perfect because He couldn\'t. Quite the contrary! We are made complete in Christ and that\'s who we are.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb42007f0>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __17: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child.
+
+*\#Short*
+
+CONTENT: __17: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child.
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\n"Why don\'t you have friends?"\n“Because I\'m fat and everyone is not," the fat kid replied. \nThe new kid laughed it off as a joke and said, "what? You\'re not fat!"\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nSometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you are, but because you’re God\'s child.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb5addbe0>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __18: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are,
+
+*\#Short*
+
+CONTENT: __18: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are,
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\n"Why don\'t you have friends?"\n“Because I\'m fat and everyone is not," the fat kid replied. \nThe new kid laughed it off as a joke and said, "what? You\'re not fat!"\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nSometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you are,', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb5ad1b50>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __19: The Fat Kid__
+*Excerpt*
+
+123
+
+*\#Prophecy*
+
+CONTENT: __19: The Fat Kid__
+*Excerpt*
+
+123
+
+*\#Prophecy*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': '123', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb420f5e0>}
+{'message_id': 8, 'date': 1612619324, 'chat': {'id': -1001276703972, 'type': 'channel', 'title': 'Learn and Grow'}, 'text': '19: The Fat Kid\nExcerpt\n\n123\n\n#Prophecy', 'entities': [{'type': 'underline', 'offset': 0, 'length': 15}, {'type': 'bold', 'offset': 16, 'length': 7}, {'type': 'hashtag', 'offset': 30, 'length': 9}, {'type': 'bold', 'offset': 30, 'length': 9}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
 MESSAGE TYPE <class 'telegram.message.Message'>
 CAT ID: 
         SELECT id 
         FROM categories 
-        WHERE name = 'Testimony'
+        WHERE name = 'Excerpt'
         AND tag = 0;
         
-<class 'datetime.datetime'> 2021-01-20 13:37:12+00:00
+<class 'datetime.datetime'> 2021-02-06 13:48:44+00:00
 
         UPDATE threads SET 
-            msg_id = 15,
+            msg_id = 8,
             parent_id = NULL,
-            category_id = 2,
-            msg = 'John3:16',
+            category_id = 3,
+            msg = '123',
             likes = 0,
-            post_dt = '2021-01-20 13:37:12',
-            title = 'Jesus loves you',
-            author_id = 4,
+            post_dt = '2021-02-06 13:48:44',
+            title = 'The Fat Kid',
+            author_id = 5,
             file_id = NULL
-        WHERE id = 41
+        WHERE id = 19
         
 Logged thread
-{'message_id': 15, 'date': 1611149832, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '41: Jesus loves you\nTestimony\n\nJohn3:16\n\n#jesusisdabest', 'entities': [{'type': 'underline', 'offset': 0, 'length': 19}, {'type': 'bold', 'offset': 20, 'length': 9}, {'type': 'hashtag', 'offset': 41, 'length': 14}, {'type': 'bold', 'offset': 41, 'length': 14}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
-
-        SELECT username FROM users
-        WHERE user_id = 133204709
-        
-res ('lucasfantastic',)
-here
-None
-getting cats
-creating tc
-getting next elemnt
-AFTER NEXT
-current tag {1: '#prophecy', 2: 'potato', 3: 'egg', 4: '#lostart', 5: 'beans', 6: None}
-final tgas ['#prophecy']
-content, __42: Nobody Ever Told Me__
-*Testimony*
-
-Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
-— Jack Deere, Surprised By The Voice of God
-
-*\##prophecy*
-
-CONTENT: __42: Nobody Ever Told Me__
-*Testimony*
-
-Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
-— Jack Deere, Surprised By The Voice of God
-
-*\##prophecy*
-
-{'new_thread': True, 'title': 'Nobody Ever Told Me', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him\n— Jack Deere, Surprised By The Voice of God', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff8029e280>}
+{'message_id': 8, 'date': 1612619324, 'chat': {'id': -1001276703972, 'type': 'channel', 'title': 'Learn and Grow'}, 'text': '19: The Fat Kid\nExcerpt\n\n123\n\n#Prophecy', 'entities': [{'type': 'underline', 'offset': 0, 'length': 15}, {'type': 'bold', 'offset': 16, 'length': 7}, {'type': 'hashtag', 'offset': 30, 'length': 9}, {'type': 'bold', 'offset': 30, 'length': 9}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
 
         SELECT username FROM users
         WHERE user_id = 133204709
@@ -321,15 +399,224 @@ getting fn perms
         WHERE functions.name = 'admin_menu'
         
 replying
+Attempt deleting thread 11
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 11
+        
+Attempt deleting thread 12
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 12
+        
+Attempt deleting thread 13
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 13
+        
+Attempt deleting thread 14
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 14
+        
+Attempt deleting thread 15
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 15
+        
+Attempt deleting thread 16
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 16
+        
+Attempt deleting thread 17
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 17
+        
+Attempt deleting thread 18
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 18
+        
+Attempt deleting thread 19
+msg id 8
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 19
+        
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __20: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you
+
+*\#Prophecy*
+
+CONTENT: __20: The Fat Kid__
+*Excerpt*
+
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+"Why don't you have friends?"
+“Because I'm fat and everyone is not," the fat kid replied. 
+The new kid laughed it off as a joke and said, "what? You're not fat!"
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you
+
+*\#Prophecy*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\n"Why don\'t you have friends?"\n“Because I\'m fat and everyone is not," the fat kid replied. \nThe new kid laughed it off as a joke and said, "what? You\'re not fat!"\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nSometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you\'ll know that you’re perfect. Not because you', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb5ad1670>}
 
         SELECT username FROM users
-        WHERE user_id = 333647246
+        WHERE user_id = 133204709
         
-res ('ollayf',)
-ISSUES: [(1, 'Potato'), (3, 'Title'), (4, 'Cars 2')]
-CONTENT: **1**: __Potato__
-**3**: __Title__
-**4**: __Cars 2__
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __21: The Fat Kid__
+*Excerpt*
+
+There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+Why don't you have friends?
+Because I'm fat and everyone is not, the fat kid replied. 
+The new kid laughed it off as a joke and said, what? You're not fat!
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! We are made complete in Christ and that's who we are.
+
+*\#Short*
+
+CONTENT: __21: The Fat Kid__
+*Excerpt*
+
+There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+Why don't you have friends?
+Because I'm fat and everyone is not, the fat kid replied. 
+The new kid laughed it off as a joke and said, what? You're not fat!
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+Sometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! We are made complete in Christ and that's who we are.
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': "There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\nWhy don't you have friends?\nBecause I'm fat and everyone is not, the fat kid replied. \nThe new kid laughed it off as a joke and said, what? You're not fat!\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)\n\nSometimes we value ourselves based on our self-image. Yes, we are created in the image of God. Perhaps, someday, we just need to find the right mirror, not the one at home, or even the smoothest. It could be, by luck, that the mirror’s provided by God himself. One look and you'll know that you’re perfect. Not because you are, but because you’re God's child. God didn't make us perfect because He couldn't. Quite the contrary! We are made complete in Christ and that's who we are.", 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb5addcd0>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __22: The Fat Kid__
+*Excerpt*
+
+There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+Why don't you have friends?
+Because I'm fat and everyone is not, the fat kid replied. 
+The new kid laughed it off as a joke and said, what? You're not fat!
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+*\#Short*
+
+CONTENT: __22: The Fat Kid__
+*Excerpt*
+
+There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+Why don't you have friends?
+Because I'm fat and everyone is not, the fat kid replied. 
+The new kid laughed it off as a joke and said, what? You're not fat!
+Turns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': "There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\nWhy don't you have friends?\nBecause I'm fat and everyone is not, the fat kid replied. \nThe new kid laughed it off as a joke and said, what? You're not fat!\nTurns out, his mirror was distorted and it made him look fat—making him think he was fat. (I always wondered why he only looked at 1 mirror in his entire life)", 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb4200940>}
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+here
+None
+getting cats
+creating tc
+getting next elemnt
+AFTER NEXT
+content, __23: The Fat Kid__
+*Excerpt*
+
+There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat.
+
+*\#Short*
+
+CONTENT: __23: The Fat Kid__
+*Excerpt*
+
+There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat.
+
+*\#Short*
+
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': 'There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat.', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb420f640>}
+{'message_id': 9, 'date': 1612619644, 'chat': {'id': -1001276703972, 'type': 'channel', 'title': 'Learn and Grow'}, 'text': '23: The Fat Kid\nExcerpt\n\nThere’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat.\n\n#Short', 'entities': [{'type': 'underline', 'offset': 0, 'length': 15}, {'type': 'bold', 'offset': 16, 'length': 7}, {'type': 'hashtag', 'offset': 120, 'length': 6}, {'type': 'bold', 'offset': 120, 'length': 6}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+MESSAGE TYPE <class 'telegram.message.Message'>
+CAT ID: 
+        SELECT id 
+        FROM categories 
+        WHERE name = 'Excerpt'
+        AND tag = 0;
+        
+<class 'datetime.datetime'> 2021-02-06 13:54:04+00:00
+
+        UPDATE threads SET 
+            msg_id = 9,
+            parent_id = NULL,
+            category_id = 3,
+            msg = 'There’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat.',
+            likes = 0,
+            post_dt = '2021-02-06 13:54:04',
+            title = 'The Fat Kid',
+            author_id = 5,
+            file_id = NULL
+        WHERE id = 23
+        
+Logged thread
+{'message_id': 9, 'date': 1612619644, 'chat': {'id': -1001276703972, 'type': 'channel', 'title': 'Learn and Grow'}, 'text': '23: The Fat Kid\nExcerpt\n\nThere’s a kid in school who woke up every day, looked in the mirror, and saw that he was fat.\n\n#Short', 'entities': [{'type': 'underline', 'offset': 0, 'length': 15}, {'type': 'bold', 'offset': 16, 'length': 7}, {'type': 'hashtag', 'offset': 120, 'length': 6}, {'type': 'bold', 'offset': 120, 'length': 6}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
 
         SELECT username FROM users
         WHERE user_id = 133204709
@@ -347,11 +634,13 @@ getting fn perms
         WHERE functions.name = 'admin_menu'
         
 replying
+Attempt deleting thread 23
+msg id 9
 
-        SELECT username FROM users
-        WHERE user_id = 133204709
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 23
         
-res ('lucasfantastic',)
 
         SELECT username FROM users
         WHERE user_id = 133204709
@@ -363,24 +652,80 @@ getting cats
 creating tc
 getting next elemnt
 AFTER NEXT
-current tag {1: '#prophecy', 2: 'potato', 3: 'egg', 4: '#lostart', 5: 'beans', 6: None}
-Prophecy
-final tgas ['Prophecy']
-content, __43: Nobody Ever Told Me__
-*Testimony*
+content, __24: The Fat Kid__
+*Excerpt*
 
-Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
-— Jack Deere, Surprised By The Voice of God
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+Why don't you have friends?
 
-*\#Prophecy*
+*\#Short*
 
-CONTENT: __43: Nobody Ever Told Me__
-*Testimony*
+CONTENT: __24: The Fat Kid__
+*Excerpt*
 
-Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him
-— Jack Deere, Surprised By The Voice of God
+There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+Why don't you have friends?
 
-*\#Prophecy*
+*\#Short*
 
-{'new_thread': True, 'title': 'Nobody Ever Told Me', 'cats': {1: ('Testimony', 'Heartfelt personal sharing')}, 'cat': 'Testimony', 'body': 'Did God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him\n— Jack Deere, Surprised By The Voice of God', 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffff802f0280>}
-{'message_id': 17, 'date': 1611152822, 'chat': {'id': -1001231158775, 'type': 'channel', 'title': 'Leobot_beta'}, 'text': '43: Nobody Ever Told Me\nTestimony\n\nDid God bring me here, or did the devil bring me here—into this room to face someone I had never met, who knew my painful secrets? My facade of indifference was assaulted secret by secret. Or was my heart being healed secret by secret? Was this torture or surgery? What good could possibly come from reading aloud the pages in the book of pain that I had closed forever? Yet it was I who had given the prophet permission to begin, and now I could not stop him\n— Jack Deere, Surprised By The Voice of God\n\n#Prophecy', 'entities': [{'type': 'underline', 'offset': 0, 'length': 23}, {'type': 'bold', 'offset': 24, 'length': 9}, {'type': 'hashtag', 'offset': 540, 'length': 9}, {'type': 'bold', 'offset': 540, 'length': 9}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+{'new_thread': True, 'title': 'The Fat Kid', 'cats': {1: ('Sermon', 'Self-Explanatory'), 2: ('Testimony', "Personal Stories of God's goodness"), 3: ('Excerpt', 'Short Reads for Growth')}, 'cat': 'Excerpt', 'body': "There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\nWhy don't you have friends?", 'file_id': None, 'file_type': None, 'tc': <utils.core_utils.TagChecker object at 0xffffb420a130>}
+{'message_id': 10, 'date': 1612619722, 'chat': {'id': -1001276703972, 'type': 'channel', 'title': 'Learn and Grow'}, 'text': "24: The Fat Kid\nExcerpt\n\nThere’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,\nWhy don't you have friends?\n\n#Short", 'entities': [{'type': 'underline', 'offset': 0, 'length': 15}, {'type': 'bold', 'offset': 16, 'length': 7}, {'type': 'hashtag', 'offset': 498, 'length': 6}, {'type': 'bold', 'offset': 498, 'length': 6}], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False}
+MESSAGE TYPE <class 'telegram.message.Message'>
+CAT ID: 
+        SELECT id 
+        FROM categories 
+        WHERE name = 'Excerpt'
+        AND tag = 0;
+        
+<class 'datetime.datetime'> 2021-02-06 13:55:22+00:00
+
+        UPDATE threads SET 
+            msg_id = 10,
+            parent_id = NULL,
+            category_id = 3,
+            msg = 'There’s a fat kid in school who woke up every day, looked in the mirror, and saw that he was fat. Ashamed, he was. Other people were not fat, and he got disappointed—and really angry. People laughed and whispered nasty things behind him. Everyone stopped being his friend, and was bullied until something happened: a kid transferred to his school. New kid was curious: why nobody was friends with the fat kid, so he walked up to him and asked,
+Why don't you have friends?',
+            likes = 0,
+            post_dt = '2021-02-06 13:55:22',
+            title = 'The Fat Kid',
+            author_id = 5,
+            file_id = NULL
+        WHERE id = 24
+        
+in admin menu
+checking permissions
+getting usert perms
+getting fn perms
+
+        SELECT permissions.name, permissions.id
+        FROM functions 
+        LEFT JOIN permissions
+        ON functions.permissions_id = permissions.id
+        WHERE functions.name = 'admin_menu'
+        
+replying
+Attempt deleting thread 24
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 24
+        
+Attempt deleting thread 24
+msg id None
+
+        UPDATE threads
+        SET deleted = 1
+        WHERE id = 24
+        
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+
+        SELECT username FROM users
+        WHERE user_id = 133204709
+        
+res ('lucasfantastic',)
+in admin menu
