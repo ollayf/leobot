@@ -6,6 +6,7 @@ def dbfmt(name):
         return 'NULL'
 
     elif isinstance(name, str):
+	name = name.replace("'", "\\'")
         return f"'{name}'"
     elif isinstance(name, (int, float)):
         return name

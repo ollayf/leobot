@@ -49,6 +49,7 @@ jobqueuer = updater.job_queue # for quicker access to JobQueue object
 logging.basicConfig(filename='storage/error_log.txt', format='%(asctime)s - %(name)s - \
                     %(levelname)s - %(message)s', level=logging.INFO)
 
+print('finish setting up logging')
 core_utils.setup_bot_data(dispatcher, owner, bot_config, dbi, testing)
 
 msg_return = dispatcher.bot.send_message(owner, bot_init_msg) # informs the owners that it is intialised

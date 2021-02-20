@@ -67,11 +67,13 @@ def clean_msg(msg):
     '''
     Checks the message for formatting issues that are not ok with telegram tingz
     '''
-    assert isinstance(msg, string), 'Message input must be a string!'
+    assert isinstance(msg, str), 'Message input must be a string!'
     msg = msg.replace('\\', '')
     msg = msg.replace('!', '\!')
     msg = msg.replace('*', '')
     msg = msg.replace('_', '')
+    msg = msg.replace('(', '')
+    msg = msg.replace(')', '')
     return msg
 
 def set_user_data_to_default(update, context, default_user_data):
