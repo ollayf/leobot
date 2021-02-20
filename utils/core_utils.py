@@ -74,6 +74,7 @@ def clean_msg(msg):
     msg = msg.replace('_', '')
     msg = msg.replace('(', '\(')
     msg = msg.replace(')', '\)')
+    msg = msg.replace('-', '\-')
     return msg
 
 def set_user_data_to_default(update, context, default_user_data):
