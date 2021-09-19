@@ -1,1 +1,2 @@
-nohup bash ./server.sh >  storage/ssh_out.txt 2>&1
+source leobot/bin/activate
+python main.py > nohup.out &
